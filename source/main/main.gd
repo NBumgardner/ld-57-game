@@ -1,5 +1,10 @@
 extends Node
 
+
+@onready var background_floor: Polygon2D = $Background/Floor
+@onready var background_floor_side: Polygon2D = $Background/FloorSide
+
+
 var fullscreen : bool = false
 
 
@@ -21,4 +26,5 @@ func _input(event: InputEvent) -> void:
 
 
 func transition_to_floor_next_lower():
-	pass
+	background_floor.visible = false
+	background_floor_side.visible = false
