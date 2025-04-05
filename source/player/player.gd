@@ -19,11 +19,5 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 
 
-
 func _input(_event: InputEvent) -> void:
 	input_direction = Input.get_vector("left","right","up","down").normalized()
-
-
-func _on_ladder_body_entered(_body):
-	movement_speed = 400
-	print_debug("Climb the ladder.")

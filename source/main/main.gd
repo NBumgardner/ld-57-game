@@ -5,6 +5,7 @@ extends Node2D
 @onready var background_floor_side: Polygon2D = $Background/Floor/FloorSide
 @onready var game_camera: Camera2D = $GameCamera
 
+var current_level
 
 var fullscreen : bool = false
 var game_camera_next_floor_distance_initial_y = 120
