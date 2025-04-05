@@ -22,16 +22,21 @@ func _ready():
 
 func load_values():
 	set_floor_count(_initial_floor_count)
+	set_player_health_current(_initial_player_health_current)
+	set_player_health_maximum(_initial_player_health_maximum)
 
 
 #region Setters
 
 func set_floor_count(updated_count: int) -> void:
 	floor_count = updated_count
+	floor_count_changed.emit(updated_count)
 
 
 func set_player_health_current(updated_health: int) -> void:
+	var old_health = player_health_current
 	player_health_current = updated_health
+	health_changed.emit(updated_health, old_health)
 
 
 func set_player_health_maximum(updated_health: int) -> void:
