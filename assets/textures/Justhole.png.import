@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnqw2jdhtxxli"
-path="res://.godot/imported/BoxGradient.png-e82c1cf67c9c2c7cc25b9ef2f29a67d2.ctex"
+uid="uid://cc05nougws1v"
+path="res://.godot/imported/Justhole.png-ba3ad222da026fb25f03bb1164eea2ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/placeholder/BoxGradient.png"
-dest_files=["res://.godot/imported/BoxGradient.png-e82c1cf67c9c2c7cc25b9ef2f29a67d2.ctex"]
+source_file="res://assets/textures/Justhole.png"
+dest_files=["res://.godot/imported/Justhole.png-ba3ad222da026fb25f03bb1164eea2ef.ctex"]
 
 [params]
 

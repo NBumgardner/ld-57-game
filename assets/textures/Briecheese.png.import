@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc05nougws1v"
-path="res://.godot/imported/Justhole.png-674887e023467a46dc425ee2cf1b0900.ctex"
+uid="uid://b8x7ax4g4x724"
+path="res://.godot/imported/Briecheese.png-3b23e78f63ab3411f1a06785ce5e13b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/placeholder/Justhole.png"
-dest_files=["res://.godot/imported/Justhole.png-674887e023467a46dc425ee2cf1b0900.ctex"]
+source_file="res://assets/textures/Briecheese.png"
+dest_files=["res://.godot/imported/Briecheese.png-3b23e78f63ab3411f1a06785ce5e13b9.ctex"]
 
 [params]
 

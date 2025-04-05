@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dx3hj00udpdbk"]
 
-[ext_resource type="Script" uid="uid://dywj2xf785k8c" path="res://source/ladder/ladder.gd" id="1_le6h6"]
-[ext_resource type="Texture2D" uid="uid://dh8s4dqrua4wb" path="res://assets/placeholder/Ladderhole.png" id="2_le6h6"]
+[ext_resource type="Script" uid="uid://dywj2xf785k8c" path="res://source/objects/ladder/ladder.gd" id="1_le6h6"]
+[ext_resource type="Texture2D" uid="uid://dh8s4dqrua4wb" path="res://assets/textures/Ladderhole.png" id="2_le6h6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_le6h6"]
 radius = 19.0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c58qfw0cqjm70"
-path="res://.godot/imported/CircleGradient.png-58031a14df8d36f72fb95c9dd1c6ff2c.ctex"
+uid="uid://cgnr32td38rii"
+path="res://.godot/imported/cat_hand.png-e57710c8b224bdd718affaf8c7859858.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/placeholder/CircleGradient.png"
-dest_files=["res://.godot/imported/CircleGradient.png-58031a14df8d36f72fb95c9dd1c6ff2c.ctex"]
+source_file="res://assets/placeholder/cat_hand.png"
+dest_files=["res://.godot/imported/cat_hand.png-e57710c8b224bdd718affaf8c7859858.ctex"]
 
 [params]
 

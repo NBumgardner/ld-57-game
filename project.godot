@@ -11,9 +11,10 @@ config_version=5
 [application]
 
 config/name="Mousehold"
+config/tags=PackedStringArray("ludum_dare")
 run/main_scene="uid://qrl3ks7c3cmx"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://assets/placeholder/icon.svg"
+config/icon="uid://b8x7ax4g4x724"
 
 [audio]
 

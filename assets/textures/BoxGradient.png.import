@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh8s4dqrua4wb"
-path="res://.godot/imported/Ladderhole.png-bb1e54f1abefaee3edf2fa3fa359cab4.ctex"
+uid="uid://bnqw2jdhtxxli"
+path="res://.godot/imported/BoxGradient.png-79e8ac9618cee788d76718e2aa8dcd88.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/placeholder/Ladderhole.png"
-dest_files=["res://.godot/imported/Ladderhole.png-bb1e54f1abefaee3edf2fa3fa359cab4.ctex"]
+source_file="res://assets/textures/BoxGradient.png"
+dest_files=["res://.godot/imported/BoxGradient.png-79e8ac9618cee788d76718e2aa8dcd88.ctex"]
 
 [params]
 

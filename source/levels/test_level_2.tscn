@@ -1,9 +1,26 @@
-[gd_scene load_steps=5 format=3 uid="uid://smwdbs6f772n"]
+[gd_scene load_steps=10 format=3 uid="uid://smwdbs6f772n"]
 
 [ext_resource type="Script" uid="uid://cs7fkoyeupiik" path="res://source/levels/level.gd" id="1_eon3n"]
-[ext_resource type="PackedScene" uid="uid://dx3hj00udpdbk" path="res://source/ladder/Ladder.tscn" id="2_nuefy"]
-[ext_resource type="Texture2D" uid="uid://c58qfw0cqjm70" path="res://assets/placeholder/CircleGradient.png" id="3_mpttg"]
-[ext_resource type="Texture2D" uid="uid://b8x7ax4g4x724" path="res://assets/placeholder/Briecheese.png" id="4_qrs6x"]
+[ext_resource type="Texture2D" uid="uid://bnqw2jdhtxxli" path="res://assets/textures/BoxGradient.png" id="2_mpttg"]
+[ext_resource type="PackedScene" uid="uid://dx3hj00udpdbk" path="res://source/objects/ladder/Ladder.tscn" id="2_nuefy"]
+[ext_resource type="Texture2D" uid="uid://c58qfw0cqjm70" path="res://assets/textures/CircleGradient.png" id="3_mpttg"]
+[ext_resource type="Texture2D" uid="uid://b8x7ax4g4x724" path="res://assets/textures/Briecheese.png" id="4_qrs6x"]
+
+[sub_resource type="Gradient" id="Gradient_h5hv5"]
+offsets = PackedFloat32Array(0, 0.465753, 0.972603)
+colors = PackedColorArray(0, 0, 0, 1, 0.123529, 0.0745098, 0.0960784, 1, 0.235294, 0.141176, 0.184314, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qrs6x"]
+gradient = SubResource("Gradient_h5hv5")
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="Gradient" id="Gradient_l81uv"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4v3nc"]
+gradient = SubResource("Gradient_l81uv")
+fill_from = Vector2(0, 1)
+fill_to = Vector2(0, 0)
 
 [node name="TestLevel" type="Node2D" node_paths=PackedStringArray("player_spawn_point")]
 process_mode = 4
@@ -11,11 +28,70 @@ script = ExtResource("1_eon3n")
 player_spawn_point = NodePath("SpawnPoint")
 metadata/_custom_type_script = "uid://cs7fkoyeupiik"
 
+[node name="Background" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="WallMiddle" type="Polygon2D" parent="Background"]
+z_index = -2000
+position = Vector2(-13.6205, -61.5004)
+scale = Vector2(1.35983, 0.873694)
+texture = SubResource("GradientTexture2D_qrs6x")
+polygon = PackedVector2Array(-154.71, 479.001, -593, -479, 613.033, -479, 175.478, 479.001)
+uv = PackedVector2Array(0, 64, 0, -1.19209e-07, 64, -4.76837e-07, 64, 64)
+
+[node name="WallRight" type="Polygon2D" parent="Background/WallMiddle"]
+position = Vector2(16.6348, 70.3912)
+scale = Vector2(0.735386, 1.14457)
+texture = SubResource("GradientTexture2D_qrs6x")
+polygon = PackedVector2Array(160, 480, 599, -481, 945, 387, 160, 540)
+uv = PackedVector2Array(0, 64, 0, -1.19209e-07, 64, -4.76837e-07, 64, 64)
+metadata/_edit_lock_ = true
+
+[node name="WallLeft" type="Polygon2D" parent="Background/WallMiddle"]
+position = Vector2(3.39785, 70.3912)
+scale = Vector2(0.735386, 1.14457)
+texture = SubResource("GradientTexture2D_qrs6x")
+polygon = PackedVector2Array(-160, 480, -599, -480, -945, 387, -160, 540)
+uv = PackedVector2Array(0, 64, 0, -1.19209e-07, 64, -4.76837e-07, 64, 64)
+metadata/_edit_lock_ = true
+
+[node name="Floor" type="Polygon2D" parent="Background"]
+z_index = -200
+color = Color(0.533045, 0.275844, 0.252221, 1)
+texture = ExtResource("2_mpttg")
+polygon = PackedVector2Array(-475, -190, 475, -190, 580, 279, -580, 279)
+uv = PackedVector2Array(16, 16, 112, 16, 104, 96, 24, 96)
+
+[node name="FloorSide" type="Polygon2D" parent="Background/Floor"]
+z_index = -50
+position = Vector2(0, 459)
+color = Color(0.461127, 0.232959, 0.212214, 1)
+texture = SubResource("GradientTexture2D_4v3nc")
+polygon = PackedVector2Array(-580, -180, 580, -180, 540, -120, -540, -120)
+uv = PackedVector2Array(-3.57628e-06, 0, 64, 0, 64, 64, -1.90735e-06, 64)
+metadata/_edit_lock_ = true
+
+[node name="Floor2" type="Polygon2D" parent="Background"]
+z_index = -300
+position = Vector2(-4, 490)
+color = Color(0.533045, 0.275844, 0.252221, 1)
+texture = ExtResource("2_mpttg")
+polygon = PackedVector2Array(-475, -190, 475, -190, 580, 279, -580, 279)
+uv = PackedVector2Array(16, 16, 112, 16, 104, 96, 24, 96)
+
+[node name="FloorSide2" type="Polygon2D" parent="Background/Floor2"]
+z_index = -50
+position = Vector2(0, 459)
+color = Color(0.461127, 0.232959, 0.212214, 1)
+texture = SubResource("GradientTexture2D_4v3nc")
+polygon = PackedVector2Array(-580, -180, 580, -180, 540, -120, -540, -120)
+uv = PackedVector2Array(-3.57628e-06, 0, 64, 0, 64, 64, -1.90735e-06, 64)
+metadata/_edit_lock_ = true
+
 [node name="SpawnPoint" type="Marker2D" parent="."]
 
 [node name="Ladder" parent="." instance=ExtResource("2_nuefy")]
 position = Vector2(-346, -116)
-collision_mask = 2
 
 [node name="PointLight2D" type="Sprite2D" parent="."]
 modulate = Color(0.89, 0.8366, 0.7298, 0.207843)
