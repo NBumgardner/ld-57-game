@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://qrl3ks7c3cmx"]
+[gd_scene load_steps=11 format=3 uid="uid://qrl3ks7c3cmx"]
 
 [ext_resource type="Script" uid="uid://bf7wl22p8nx5d" path="res://source/main/main.gd" id="1_nevys"]
 [ext_resource type="Texture2D" uid="uid://bnqw2jdhtxxli" path="res://assets/placeholder/BoxGradient.png" id="2_n3iyj"]
 [ext_resource type="PackedScene" uid="uid://cbb4ib7lqcrfb" path="res://source/player/Player.tscn" id="3_h5hv5"]
+[ext_resource type="PackedScene" uid="uid://dx3hj00udpdbk" path="res://source/ladder/Ladder.tscn" id="4_l81uv"]
+[ext_resource type="PackedScene" uid="uid://b850ghjahait8" path="res://source/ui/hud/Hud.tscn" id="5_2a4ee"]
 
 [sub_resource type="Gradient" id="Gradient_h5hv5"]
 offsets = PackedFloat32Array(0, 0.465753, 0.972603)
@@ -32,25 +34,32 @@ metadata/_edit_lock_ = true
 metadata/_edit_lock_ = true
 
 [node name="WallMiddle" type="Polygon2D" parent="Background"]
+z_index = -2000
 position = Vector2(-13.6205, -61.5004)
 scale = Vector2(1.35983, 0.873694)
 texture = SubResource("GradientTexture2D_l81uv")
 polygon = PackedVector2Array(-154.71, 479.001, -593, -479, 613.033, -479, 175.478, 479.001)
 uv = PackedVector2Array(0, 64, 0, -1.19209e-07, 64, -4.76837e-07, 64, 64)
+metadata/_edit_lock_ = true
 
 [node name="WallRight" type="Polygon2D" parent="Background"]
+z_index = -1000
 position = Vector2(9, 0)
 texture = SubResource("GradientTexture2D_l81uv")
 polygon = PackedVector2Array(160, 480, 599, -481, 945, 387, 160, 540)
 uv = PackedVector2Array(0, 64, 0, -1.19209e-07, 64, -4.76837e-07, 64, 64)
+metadata/_edit_lock_ = true
 
 [node name="WallLeft" type="Polygon2D" parent="Background"]
+z_index = -1000
 position = Vector2(-9, 0)
 texture = SubResource("GradientTexture2D_l81uv")
 polygon = PackedVector2Array(-160, 480, -599, -480, -945, 387, -160, 540)
 uv = PackedVector2Array(0, 64, 0, -1.19209e-07, 64, -4.76837e-07, 64, 64)
+metadata/_edit_lock_ = true
 
 [node name="Floor" type="Polygon2D" parent="Background"]
+z_index = -200
 color = Color(0.533045, 0.275844, 0.252221, 1)
 texture = ExtResource("2_n3iyj")
 polygon = PackedVector2Array(-475, -190, 475, -190, 580, 279, -580, 279)
@@ -58,7 +67,26 @@ uv = PackedVector2Array(16, 16, 112, 16, 104, 96, 24, 96)
 metadata/_edit_lock_ = true
 
 [node name="FloorSide" type="Polygon2D" parent="Background"]
+z_index = -100
 position = Vector2(0, 459)
+color = Color(0.461127, 0.232959, 0.212214, 1)
+texture = SubResource("GradientTexture2D_2a4ee")
+polygon = PackedVector2Array(-580, -180, 580, -180, 540, -120, -540, -120)
+uv = PackedVector2Array(-3.57628e-06, 0, 64, 0, 64, 64, -1.90735e-06, 64)
+metadata/_edit_lock_ = true
+
+[node name="Floor2" type="Polygon2D" parent="Background"]
+z_index = -300
+position = Vector2(-4, 128)
+color = Color(0.533045, 0.275844, 0.252221, 1)
+texture = ExtResource("2_n3iyj")
+polygon = PackedVector2Array(-475, -190, 475, -190, 580, 279, -580, 279)
+uv = PackedVector2Array(16, 16, 112, 16, 104, 96, 24, 96)
+metadata/_edit_lock_ = true
+
+[node name="FloorSide2" type="Polygon2D" parent="Background"]
+z_index = -400
+position = Vector2(-4, 587)
 color = Color(0.461127, 0.232959, 0.212214, 1)
 texture = SubResource("GradientTexture2D_2a4ee")
 polygon = PackedVector2Array(-580, -180, 580, -180, 540, -120, -540, -120)
@@ -94,3 +122,10 @@ metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("3_h5hv5")]
 position = Vector2(-349, -81)
+
+[node name="Ladder" parent="." instance=ExtResource("4_l81uv")]
+collision_mask = 2
+
+[node name="Hud" parent="." instance=ExtResource("5_2a4ee")]
+
+[connection signal="body_entered" from="Ladder" to="Player" method="_on_ladder_body_entered"]
