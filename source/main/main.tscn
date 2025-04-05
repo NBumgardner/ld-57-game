@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://qrl3ks7c3cmx"]
+[gd_scene load_steps=10 format=3 uid="uid://qrl3ks7c3cmx"]
 
 [ext_resource type="Script" uid="uid://bf7wl22p8nx5d" path="res://source/main/main.gd" id="1_nevys"]
 [ext_resource type="Texture2D" uid="uid://bnqw2jdhtxxli" path="res://assets/placeholder/BoxGradient.png" id="2_n3iyj"]
 [ext_resource type="PackedScene" uid="uid://cbb4ib7lqcrfb" path="res://source/player/Player.tscn" id="3_h5hv5"]
+[ext_resource type="PackedScene" uid="uid://dx3hj00udpdbk" path="res://source/ladder/Ladder.tscn" id="4_l81uv"]
 
 [sub_resource type="Gradient" id="Gradient_h5hv5"]
 offsets = PackedFloat32Array(0, 0.465753, 0.972603)
@@ -94,3 +95,7 @@ metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("3_h5hv5")]
 position = Vector2(-349, -81)
+
+[node name="Ladder" parent="." instance=ExtResource("4_l81uv")]
+
+[connection signal="body_entered" from="Ladder" to="Player" method="_on_ladder_body_entered"]

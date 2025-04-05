@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://dx3hj00udpdbk"]
+
+[ext_resource type="Script" uid="uid://dywj2xf785k8c" path="res://source/ladder/ladder.gd" id="1_le6h6"]
+[ext_resource type="Texture2D" uid="uid://boovsguwkq1a8" path="res://assets/placeholder/icon.svg" id="1_wevnf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_le6h6"]
+size = Vector2(127, 128)
+
+[node name="Ladder" type="Area2D"]
+script = ExtResource("1_le6h6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wevnf")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 72
+text = "Ladder"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_le6h6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
