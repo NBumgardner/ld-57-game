@@ -70,6 +70,22 @@ polygon = PackedVector2Array(-580, -180, 580, -180, 540, -120, -540, -120)
 uv = PackedVector2Array(-3.57628e-06, 0, 64, 0, 64, 64, -1.90735e-06, 64)
 metadata/_edit_lock_ = true
 
+[node name="Floor2" type="Polygon2D" parent="Background"]
+z_index = -300
+position = Vector2(-4, 128)
+color = Color(0.533045, 0.275844, 0.252221, 1)
+texture = ExtResource("2_n3iyj")
+polygon = PackedVector2Array(-475, -190, 475, -190, 580, 279, -580, 279)
+uv = PackedVector2Array(16, 16, 112, 16, 104, 96, 24, 96)
+
+[node name="FloorSide2" type="Polygon2D" parent="Background"]
+z_index = -400
+position = Vector2(-4, 587)
+color = Color(0.461127, 0.232959, 0.212214, 1)
+texture = SubResource("GradientTexture2D_2a4ee")
+polygon = PackedVector2Array(-580, -180, 580, -180, 540, -120, -540, -120)
+uv = PackedVector2Array(-3.57628e-06, 0, 64, 0, 64, 64, -1.90735e-06, 64)
+
 [node name="Borders" type="StaticBody2D" parent="."]
 visible = false
 metadata/_edit_lock_ = true
