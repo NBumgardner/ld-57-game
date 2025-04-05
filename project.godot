@@ -23,10 +23,15 @@ buses/default_bus_layout="uid://cf1kouuuqdfjn"
 
 Events="*res://source/globals/event_bus.gd"
 AudioManager="*res://source/globals/AudioManager.tscn"
+SoundManager="*res://addons/sound_manager/sound_manager.gd"
 
 [debug]
 
 gdscript/warnings/unused_signal=0
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/sound_manager/plugin.cfg")
 
 [file_customization]
 
