@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://db6upx7yhxsjs"]
+
+[ext_resource type="Script" uid="uid://cs7fkoyeupiik" path="res://source/levels/level.gd" id="1_u5bq0"]
+
+[node name="TestLevel" type="Node2D"]
+script = ExtResource("1_u5bq0")
+metadata/_custom_type_script = "uid://cs7fkoyeupiik"
