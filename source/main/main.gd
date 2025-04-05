@@ -14,3 +14,11 @@ func _input(event: InputEvent) -> void:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 		else:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+
+	if event.is_action_pressed("debug_skip_down"):
+		print_debug("Debug skip to next lower floor.")
+		transition_to_floor_next_lower()
+
+
+func transition_to_floor_next_lower():
+	pass
