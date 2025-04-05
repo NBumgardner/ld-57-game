@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://b850ghjahait8"]
+
+[node name="Hud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopGameStatus" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TopGameStatus"]
+layout_mode = 2
+
+[node name="HealthLabel" type="Label" parent="TopGameStatus/HBoxContainer"]
+layout_mode = 2
+text = "Health:"
+
+[node name="HealthAmount" type="Label" parent="TopGameStatus/HBoxContainer"]
+layout_mode = 2
+text = "100"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TopGameStatus"]
+layout_mode = 2
+
+[node name="FloorLabel" type="Label" parent="TopGameStatus/HBoxContainer2"]
+layout_mode = 2
+text = "Floor:"
+
+[node name="FloorCount" type="Label" parent="TopGameStatus/HBoxContainer2"]
+layout_mode = 2
+text = "1"
