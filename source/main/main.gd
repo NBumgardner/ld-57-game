@@ -14,7 +14,7 @@ var game_camera_next_floor_distance_divisor_y = 2
 
 func _ready() -> void:
 	game_camera_next_floor_distance_y = game_camera_next_floor_distance_initial_y
-	pass
+	Database.load_values()
 
 
 func _input(event: InputEvent) -> void:

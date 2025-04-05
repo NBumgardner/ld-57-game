@@ -21,6 +21,7 @@ buses/default_bus_layout="uid://cf1kouuuqdfjn"
 
 [autoload]
 
+Database="*res://assets/data/database.gd"
 Events="*res://source/globals/event_bus.gd"
 AudioManager="*res://source/globals/AudioManager.tscn"
 SoundManager="*res://addons/sound_manager/sound_manager.gd"
