@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://qrl3ks7c3cmx"]
+[gd_scene load_steps=9 format=3 uid="uid://qrl3ks7c3cmx"]
 
 [ext_resource type="Script" uid="uid://bf7wl22p8nx5d" path="res://source/main/main.gd" id="1_nevys"]
 [ext_resource type="Texture2D" uid="uid://bnqw2jdhtxxli" path="res://assets/placeholder/BoxGradient.png" id="2_n3iyj"]
+[ext_resource type="PackedScene" uid="uid://cbb4ib7lqcrfb" path="res://source/player/Player.tscn" id="3_h5hv5"]
 
 [sub_resource type="Gradient" id="Gradient_h5hv5"]
 offsets = PackedFloat32Array(0, 0.465753, 0.972603)
@@ -34,23 +35,20 @@ metadata/_edit_lock_ = true
 position = Vector2(-13.6205, -61.5004)
 scale = Vector2(1.35983, 0.873694)
 texture = SubResource("GradientTexture2D_l81uv")
-polygon = PackedVector2Array(-143.443, 479.001, -593, -479, 613.033, -479, 163.476, 479.001)
+polygon = PackedVector2Array(-154.71, 479.001, -593, -479, 613.033, -479, 175.478, 479.001)
 uv = PackedVector2Array(0, 64, 0, -1.19209e-07, 64, -4.76837e-07, 64, 64)
-metadata/_edit_lock_ = true
 
 [node name="WallRight" type="Polygon2D" parent="Background"]
 position = Vector2(9, 0)
 texture = SubResource("GradientTexture2D_l81uv")
-polygon = PackedVector2Array(147, 479, 604, -480, 850, 149, 437, 480)
+polygon = PackedVector2Array(160, 480, 599, -481, 945, 387, 160, 540)
 uv = PackedVector2Array(0, 64, 0, -1.19209e-07, 64, -4.76837e-07, 64, 64)
-metadata/_edit_lock_ = true
 
 [node name="WallLeft" type="Polygon2D" parent="Background"]
 position = Vector2(-9, 0)
 texture = SubResource("GradientTexture2D_l81uv")
-polygon = PackedVector2Array(-147, 479, -604, -480, -850, 149, -437, 480)
+polygon = PackedVector2Array(-160, 480, -599, -480, -945, 387, -160, 540)
 uv = PackedVector2Array(0, 64, 0, -1.19209e-07, 64, -4.76837e-07, 64, 64)
-metadata/_edit_lock_ = true
 
 [node name="Floor" type="Polygon2D" parent="Background"]
 color = Color(0.533045, 0.275844, 0.252221, 1)
@@ -93,3 +91,6 @@ position = Vector2(518, 0)
 rotation = -1.79245
 shape = SubResource("WorldBoundaryShape2D_n3iyj")
 metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("3_h5hv5")]
+position = Vector2(-349, -81)
