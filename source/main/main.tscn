@@ -32,6 +32,7 @@ metadata/_edit_lock_ = true
 metadata/_edit_lock_ = true
 
 [node name="WallMiddle" type="Polygon2D" parent="Background"]
+z_index = -2000
 position = Vector2(-13.6205, -61.5004)
 scale = Vector2(1.35983, 0.873694)
 texture = SubResource("GradientTexture2D_l81uv")
@@ -39,18 +40,21 @@ polygon = PackedVector2Array(-154.71, 479.001, -593, -479, 613.033, -479, 175.47
 uv = PackedVector2Array(0, 64, 0, -1.19209e-07, 64, -4.76837e-07, 64, 64)
 
 [node name="WallRight" type="Polygon2D" parent="Background"]
+z_index = -1000
 position = Vector2(9, 0)
 texture = SubResource("GradientTexture2D_l81uv")
 polygon = PackedVector2Array(160, 480, 599, -481, 945, 387, 160, 540)
 uv = PackedVector2Array(0, 64, 0, -1.19209e-07, 64, -4.76837e-07, 64, 64)
 
 [node name="WallLeft" type="Polygon2D" parent="Background"]
+z_index = -1000
 position = Vector2(-9, 0)
 texture = SubResource("GradientTexture2D_l81uv")
 polygon = PackedVector2Array(-160, 480, -599, -480, -945, 387, -160, 540)
 uv = PackedVector2Array(0, 64, 0, -1.19209e-07, 64, -4.76837e-07, 64, 64)
 
 [node name="Floor" type="Polygon2D" parent="Background"]
+z_index = -200
 color = Color(0.533045, 0.275844, 0.252221, 1)
 texture = ExtResource("2_n3iyj")
 polygon = PackedVector2Array(-475, -190, 475, -190, 580, 279, -580, 279)
@@ -58,6 +62,7 @@ uv = PackedVector2Array(16, 16, 112, 16, 104, 96, 24, 96)
 metadata/_edit_lock_ = true
 
 [node name="FloorSide" type="Polygon2D" parent="Background"]
+z_index = -100
 position = Vector2(0, 459)
 color = Color(0.461127, 0.232959, 0.212214, 1)
 texture = SubResource("GradientTexture2D_2a4ee")
