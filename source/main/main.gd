@@ -4,7 +4,7 @@ var fullscreen : bool = false
 
 
 func _ready() -> void:
-	pass
+	Database.load_values()
 
 
 func _input(event: InputEvent) -> void:
