@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://db6upx7yhxsjs"]
+[gd_scene load_steps=11 format=3 uid="uid://db6upx7yhxsjs"]
 
 [ext_resource type="Script" uid="uid://cs7fkoyeupiik" path="res://source/levels/level.gd" id="1_u5bq0"]
 [ext_resource type="Texture2D" uid="uid://bnqw2jdhtxxli" path="res://assets/textures/BoxGradient.png" id="2_a1lpf"]
 [ext_resource type="PackedScene" uid="uid://dx3hj00udpdbk" path="res://source/objects/ladder/Ladder.tscn" id="2_epmhw"]
 [ext_resource type="Texture2D" uid="uid://c58qfw0cqjm70" path="res://assets/textures/CircleGradient.png" id="3_a1lpf"]
 [ext_resource type="Texture2D" uid="uid://b8x7ax4g4x724" path="res://assets/textures/Briecheese.png" id="4_eeevt"]
+[ext_resource type="PackedScene" uid="uid://bi4xnp24pulp0" path="res://source/objects/cat/cat_trap.tscn" id="6_eeevt"]
 
 [sub_resource type="Gradient" id="Gradient_eeevt"]
 offsets = PackedFloat32Array(0, 0.465753, 0.972603)
@@ -105,3 +106,6 @@ texture = ExtResource("3_a1lpf")
 position = Vector2(183, -96)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("4_eeevt")
+
+[node name="CatTrap" parent="." instance=ExtResource("6_eeevt")]
+position = Vector2(-274, -110)
