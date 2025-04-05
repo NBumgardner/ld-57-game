@@ -1,8 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://qrl3ks7c3cmx"]
+[gd_scene load_steps=14 format=3 uid="uid://qrl3ks7c3cmx"]
 
 [ext_resource type="Script" uid="uid://bf7wl22p8nx5d" path="res://source/main/main.gd" id="1_nevys"]
 [ext_resource type="Texture2D" uid="uid://bnqw2jdhtxxli" path="res://assets/placeholder/BoxGradient.png" id="2_n3iyj"]
 [ext_resource type="PackedScene" uid="uid://cbb4ib7lqcrfb" path="res://source/player/Player.tscn" id="3_h5hv5"]
+[ext_resource type="Texture2D" uid="uid://plvfglxwn6jt" path="res://assets/placeholder/blueberry/1leg.png" id="4_uyvue"]
+[ext_resource type="Texture2D" uid="uid://y66pswev6hmd" path="res://assets/placeholder/blueberry/1foot.png" id="5_5yu6p"]
+[ext_resource type="Texture2D" uid="uid://dayp5pmg2ecui" path="res://assets/placeholder/blueberry/2body.png" id="6_falkx"]
+[ext_resource type="Texture2D" uid="uid://d0qm71yy6oe82" path="res://assets/placeholder/blueberry/2leg.png" id="7_b4csw"]
+[ext_resource type="Texture2D" uid="uid://8emlhw4fb844" path="res://assets/placeholder/blueberry/2foot.png" id="8_su7r8"]
 
 [sub_resource type="Gradient" id="Gradient_h5hv5"]
 offsets = PackedFloat32Array(0, 0.465753, 0.972603)
@@ -94,3 +99,41 @@ metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("3_h5hv5")]
 position = Vector2(-349, -81)
+
+[node name="root" type="Node2D" parent="Player"]
+
+[node name="leg_r" type="Sprite2D" parent="Player/root"]
+modulate = Color(0.459252, 0.635866, 0.713031, 1)
+scale = Vector2(0.122881, 0.122881)
+texture = ExtResource("4_uyvue")
+offset = Vector2(0.0895996, 169.048)
+
+[node name="foot_r" type="Sprite2D" parent="Player/root"]
+modulate = Color(0.458824, 0.635294, 0.713726, 1)
+scale = Vector2(0.122881, 0.122881)
+texture = ExtResource("5_5yu6p")
+offset = Vector2(-57.511, -0.639755)
+
+[node name="torso" type="Sprite2D" parent="Player/root"]
+scale = Vector2(0.122881, 0.122881)
+texture = ExtResource("6_falkx")
+
+[node name="remote_leg_r" type="RemoteTransform2D" parent="Player/root/torso"]
+remote_path = NodePath("../../leg_r")
+
+[node name="remote_foot_r" type="RemoteTransform2D" parent="Player/root/torso/remote_leg_r"]
+remote_path = NodePath("../../../foot_r")
+
+[node name="leg_l" type="Sprite2D" parent="Player/root/torso"]
+position = Vector2(49.8434, 180.886)
+rotation = 0.00653929
+scale = Vector2(1, 1)
+texture = ExtResource("7_b4csw")
+offset = Vector2(0.0895996, 169.048)
+
+[node name="foot_l" type="Sprite2D" parent="Player/root/torso/leg_l"]
+position = Vector2(-6.9306, 339.994)
+texture = ExtResource("8_su7r8")
+offset = Vector2(-57.511, -0.639755)
+
+[node name="Marker2D" type="Marker2D" parent="Player/root/torso/leg_l/foot_l"]
