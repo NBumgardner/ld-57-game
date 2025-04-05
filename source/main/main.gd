@@ -1,8 +1,8 @@
-extends Node
+extends Node2D
 
 
 @onready var background_floor: Polygon2D = $Background/Floor
-@onready var background_floor_side: Polygon2D = $Background/FloorSide
+@onready var background_floor_side: Polygon2D = $Background/Floor/FloorSide
 @onready var game_camera: Camera2D = $GameCamera
 
 

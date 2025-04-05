@@ -24,7 +24,9 @@ fill_to = Vector2(0, 0)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_n3iyj"]
 
-[node name="Main" type="Node"]
+[node name="Main" type="Node2D"]
+z_as_relative = false
+y_sort_enabled = true
 script = ExtResource("1_nevys")
 
 [node name="GameCamera" type="Camera2D" parent="."]
@@ -66,8 +68,8 @@ polygon = PackedVector2Array(-475, -190, 475, -190, 580, 279, -580, 279)
 uv = PackedVector2Array(16, 16, 112, 16, 104, 96, 24, 96)
 metadata/_edit_lock_ = true
 
-[node name="FloorSide" type="Polygon2D" parent="Background"]
-z_index = -100
+[node name="FloorSide" type="Polygon2D" parent="Background/Floor"]
+z_index = -50
 position = Vector2(0, 459)
 color = Color(0.461127, 0.232959, 0.212214, 1)
 texture = SubResource("GradientTexture2D_2a4ee")
@@ -84,9 +86,9 @@ polygon = PackedVector2Array(-475, -190, 475, -190, 580, 279, -580, 279)
 uv = PackedVector2Array(16, 16, 112, 16, 104, 96, 24, 96)
 metadata/_edit_lock_ = true
 
-[node name="FloorSide2" type="Polygon2D" parent="Background"]
-z_index = -400
-position = Vector2(-4, 587)
+[node name="FloorSide2" type="Polygon2D" parent="Background/Floor2"]
+z_index = -50
+position = Vector2(0, 459)
 color = Color(0.461127, 0.232959, 0.212214, 1)
 texture = SubResource("GradientTexture2D_2a4ee")
 polygon = PackedVector2Array(-580, -180, 580, -180, 540, -120, -540, -120)
@@ -126,6 +128,8 @@ position = Vector2(-349, -81)
 [node name="Ladder" parent="." instance=ExtResource("4_l81uv")]
 collision_mask = 2
 
-[node name="Hud" parent="." instance=ExtResource("5_2a4ee")]
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Hud" parent="UI" instance=ExtResource("5_2a4ee")]
 
 [connection signal="body_entered" from="Ladder" to="Player" method="_on_ladder_body_entered"]
