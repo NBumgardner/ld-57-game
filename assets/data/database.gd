@@ -2,6 +2,10 @@
 extends Node
 
 
+signal floor_count_changed(new_floor_count: int)
+signal health_changed(new_value: int, old_value: int)
+
+
 const _initial_floor_count: int = 1
 const _initial_player_health_current: int = 2
 const _initial_player_health_maximum: int = 2
