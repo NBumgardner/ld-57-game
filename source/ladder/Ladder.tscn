@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dx3hj00udpdbk"]
 
 [ext_resource type="Script" uid="uid://dywj2xf785k8c" path="res://source/ladder/ladder.gd" id="1_le6h6"]
-[ext_resource type="Texture2D" uid="uid://boovsguwkq1a8" path="res://assets/placeholder/icon.svg" id="1_wevnf"]
+[ext_resource type="Texture2D" uid="uid://beq4nvtvqi4yu" path="res://assets/placeholder/ladder-down_128-128_transparent.png" id="2_le6h6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_le6h6"]
 size = Vector2(127, 128)
@@ -10,7 +10,7 @@ size = Vector2(127, 128)
 script = ExtResource("1_le6h6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_wevnf")
+texture = ExtResource("2_le6h6")
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 15
