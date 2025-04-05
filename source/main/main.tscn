@@ -97,5 +97,3 @@ metadata/_edit_lock_ = true
 position = Vector2(-349, -81)
 
 [node name="Ladder" parent="." instance=ExtResource("4_l81uv")]
-
-[connection signal="body_entered" from="Ladder" to="Player" method="_on_ladder_body_entered"]

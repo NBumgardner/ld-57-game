@@ -22,7 +22,3 @@ func _physics_process(_delta: float) -> void:
 
 func _input(_event: InputEvent) -> void:
 	input_direction = Input.get_vector("left","right","up","down").normalized()
-
-
-func _on_ladder_body_entered(body):
-	print_debug("Called method _on_ladder_body_entered with body:", body)
