@@ -1,0 +1,47 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="ld-57"
+run/main_scene="uid://qrl3ks7c3cmx"
+config/features=PackedStringArray("4.4", "GL Compatibility")
+config/icon="res://assets/icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://cf1kouuuqdfjn"
+
+[autoload]
+
+Events="*res://source/globals/event_bus.gd"
+AudioManager="*res://source/globals/AudioManager.tscn"
+
+[debug]
+
+gdscript/warnings/unused_signal=0
+
+[file_customization]
+
+folder_colors={
+"res://addons/": "red",
+"res://assets/": "orange",
+"res://source/": "teal"
+}
+
+[gui]
+
+theme/custom="uid://covbdjp1qewnk"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.2233, 0.29, 0.287777, 1)
