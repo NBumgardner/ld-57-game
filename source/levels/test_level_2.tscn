@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://smwdbs6f772n"]
+
+[ext_resource type="Script" uid="uid://cs7fkoyeupiik" path="res://source/levels/level.gd" id="1_eon3n"]
+[ext_resource type="PackedScene" uid="uid://dx3hj00udpdbk" path="res://source/ladder/Ladder.tscn" id="2_nuefy"]
+[ext_resource type="Texture2D" uid="uid://c58qfw0cqjm70" path="res://assets/placeholder/CircleGradient.png" id="3_mpttg"]
+[ext_resource type="Texture2D" uid="uid://b8x7ax4g4x724" path="res://assets/placeholder/Briecheese.png" id="4_qrs6x"]
+
+[node name="TestLevel" type="Node2D" node_paths=PackedStringArray("player_spawn_point")]
+process_mode = 4
+script = ExtResource("1_eon3n")
+player_spawn_point = NodePath("SpawnPoint")
+metadata/_custom_type_script = "uid://cs7fkoyeupiik"
+
+[node name="SpawnPoint" type="Marker2D" parent="."]
+
+[node name="Ladder" parent="." instance=ExtResource("2_nuefy")]
+position = Vector2(-346, -116)
+collision_mask = 2
+
+[node name="PointLight2D" type="Sprite2D" parent="."]
+modulate = Color(0.89, 0.8366, 0.7298, 0.207843)
+z_index = -1
+position = Vector2(217, -75)
+scale = Vector2(1.54688, 0.733826)
+texture = ExtResource("3_mpttg")
+
+[node name="Briecheese" type="Sprite2D" parent="."]
+position = Vector2(183, -96)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_qrs6x")

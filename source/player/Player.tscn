@@ -23,8 +23,10 @@ collision_layer = 2
 script = ExtResource("1_rbb8n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 44)
 scale = Vector2(0.680285, 0.680285)
 sprite_frames = SubResource("SpriteFrames_rbb8n")
+offset = Vector2(0, -62)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 36)

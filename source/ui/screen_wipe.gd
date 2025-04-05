@@ -13,7 +13,3 @@ func wipe_start() -> void:
 
 func wipe_end() -> void:
 	animation.play("reveal")
-
-
-func _on_ladder_body_entered(_body: Node2D) -> void:
-	wipe_start()

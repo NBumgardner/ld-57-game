@@ -1,12 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://qrl3ks7c3cmx"]
+[gd_scene load_steps=12 format=3 uid="uid://qrl3ks7c3cmx"]
 
 [ext_resource type="Script" uid="uid://bf7wl22p8nx5d" path="res://source/main/main.gd" id="1_nevys"]
 [ext_resource type="Texture2D" uid="uid://bnqw2jdhtxxli" path="res://assets/placeholder/BoxGradient.png" id="2_n3iyj"]
 [ext_resource type="PackedScene" uid="uid://cbb4ib7lqcrfb" path="res://source/player/Player.tscn" id="3_h5hv5"]
-[ext_resource type="PackedScene" uid="uid://dx3hj00udpdbk" path="res://source/ladder/Ladder.tscn" id="4_l81uv"]
+[ext_resource type="PackedScene" uid="uid://db6upx7yhxsjs" path="res://source/levels/test_level.tscn" id="4_qkuhj"]
 [ext_resource type="PackedScene" uid="uid://b850ghjahait8" path="res://source/ui/hud/Hud.tscn" id="5_2a4ee"]
 [ext_resource type="PackedScene" uid="uid://c3vyypduivhgk" path="res://source/ui/screen_wipe.tscn" id="6_qkuhj"]
-[ext_resource type="Texture2D" uid="uid://c58qfw0cqjm70" path="res://assets/placeholder/CircleGradient.png" id="7_420hx"]
 
 [sub_resource type="Gradient" id="Gradient_h5hv5"]
 offsets = PackedFloat32Array(0, 0.465753, 0.972603)
@@ -26,10 +25,13 @@ fill_to = Vector2(0, 0)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_n3iyj"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" node_paths=PackedStringArray("current_level")]
 z_as_relative = false
 y_sort_enabled = true
 script = ExtResource("1_nevys")
+current_level = NodePath("TestLevel")
+
+[node name="TestLevel" parent="." instance=ExtResource("4_qkuhj")]
 
 [node name="GameCamera" type="Camera2D" parent="."]
 metadata/_edit_lock_ = true
@@ -122,19 +124,8 @@ shape = SubResource("WorldBoundaryShape2D_n3iyj")
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." instance=ExtResource("3_h5hv5")]
+z_as_relative = false
 position = Vector2(-254, 51)
-
-[node name="Ladder" parent="." instance=ExtResource("4_l81uv")]
-position = Vector2(-32, 36)
-collision_mask = 2
-
-[node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(-156, 79)
-scale = Vector2(1.54688, 1.1239)
-color = Color(0.967074, 0.877104, 0.655665, 1)
-energy = 0.6
-shadow_enabled = true
-texture = ExtResource("7_420hx")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -142,5 +133,3 @@ texture = ExtResource("7_420hx")
 
 [node name="ScreenWipe" parent="UI" instance=ExtResource("6_qkuhj")]
 z_index = 10
-
-[connection signal="body_entered" from="Ladder" to="UI/ScreenWipe" method="_on_ladder_body_entered"]
