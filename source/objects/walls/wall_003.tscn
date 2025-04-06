@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://t841wjrlo7xk"]
+
+[ext_resource type="Texture2D" uid="uid://ulqc2lgitpa5" path="res://assets/placeholder/wall_b_2_matchbox.png" id="1_106r7"]
+
+[node name="Wall003" type="StaticBody2D"]
+
+[node name="WallBMatches" type="Sprite2D" parent="."]
+texture = ExtResource("1_106r7")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 0.500014)
+scale = Vector2(1, 0.992647)
+polygon = PackedVector2Array(-75.5, -93.5, -75.5, 93.5, 75.5, 93.5, 75.5, -93.5)
