@@ -1,0 +1,13 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=5 format=3 uid="uid://c8rgd73gdm077"]
+
+[ext_resource type="AudioStream" uid="uid://phxmsyi1vrbc" path="res://assets/audio/sfx_207_nibble.wav" id="1_r4h1q"]
+[ext_resource type="AudioStream" uid="uid://b7e51wek0cefe" path="res://assets/audio/sfx_208_nibble.wav" id="2_j303a"]
+[ext_resource type="AudioStream" uid="uid://bw6jlpb1bbhss" path="res://assets/audio/sfx_209_nibble.wav" id="3_e4ref"]
+[ext_resource type="AudioStream" uid="uid://5ibgfeefd2q5" path="res://assets/audio/sfx_210_nibble.wav" id="4_ptok7"]
+
+[resource]
+streams_count = 4
+stream_0/stream = ExtResource("1_r4h1q")
+stream_1/stream = ExtResource("2_j303a")
+stream_2/stream = ExtResource("3_e4ref")
+stream_3/stream = ExtResource("4_ptok7")
