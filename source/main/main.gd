@@ -1,14 +1,15 @@
 extends Node
 
+@onready var game_world: GameWorld = $GameWorld
+@onready var hud: Hud = $UI/Hud
+
 var fullscreen : bool = false
 #var game_camera_next_floor_distance_initial_y = 120
-#var game_camera_next_floor_distance_y : float
+#var game_camera_next_floor_distance_y : float = game_camera_next_floor_distance_initial_y
 #var game_camera_next_floor_distance_divisor_y = 2
 
 
 func _ready() -> void:
-	#game_camera_next_floor_distance_y = game_camera_next_floor_distance_initial_y
-	Database.load_values()
 	Events.game_paused.connect(_on_game_paused)
 	Events.game_unpaused.connect(_on_game_unpaused)
 

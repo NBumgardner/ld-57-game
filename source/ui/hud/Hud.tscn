@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cnkyq0oftu215" path="res://source/ui/hud/hud.gd" id="1_tknoo"]
 
 [node name="Hud" type="Control"]
+process_mode = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,6 +25,7 @@ layout_mode = 2
 text = "Health:"
 
 [node name="HealthAmount" type="Label" parent="TopGameStatus/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "100"
 
@@ -35,5 +37,18 @@ layout_mode = 2
 text = "Floor:"
 
 [node name="FloorCount" type="Label" parent="TopGameStatus/HBoxContainer2"]
+unique_name_in_owner = true
 layout_mode = 2
-text = "10"
+text = "1"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="TopGameStatus"]
+layout_mode = 2
+
+[node name="CheeseLabel" type="Label" parent="TopGameStatus/HBoxContainer3"]
+layout_mode = 2
+text = "Cheese:"
+
+[node name="CheeseCount" type="Label" parent="TopGameStatus/HBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"

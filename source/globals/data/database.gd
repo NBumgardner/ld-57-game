@@ -11,9 +11,20 @@ const _initial_player_health_current: int = 2
 const _initial_player_health_maximum: int = 2
 
 
-var floor_count: int
-var player_health_current: int
-var player_health_maximum: int
+var floor_count: int:
+	set(updated_count):
+		floor_count = updated_count
+		floor_count_changed.emit(floor_count)
+
+var player_health_current: int:
+	set(updated_health):
+		var old_health = player_health_current
+		player_health_current = min(updated_health, player_health_maximum)
+		health_changed.emit(player_health_current, old_health)
+
+var player_health_maximum: int:
+	set(updated_health):
+		player_health_maximum = updated_health
 
 
 func _ready():
@@ -21,25 +32,6 @@ func _ready():
 
 
 func load_values():
-	set_floor_count(_initial_floor_count)
-	set_player_health_current(_initial_player_health_current)
-	set_player_health_maximum(_initial_player_health_maximum)
-
-
-#region Setters
-
-func set_floor_count(updated_count: int) -> void:
-	floor_count = updated_count
-	floor_count_changed.emit(updated_count)
-
-
-func set_player_health_current(updated_health: int) -> void:
-	var old_health = player_health_current
-	player_health_current = updated_health
-	health_changed.emit(updated_health, old_health)
-
-
-func set_player_health_maximum(updated_health: int) -> void:
-	player_health_maximum = updated_health
-
-#endregion Setters
+	floor_count = _initial_floor_count
+	player_health_current = _initial_player_health_current
+	player_health_maximum = _initial_player_health_maximum

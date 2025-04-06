@@ -12,6 +12,7 @@ func _ready() -> void:
 
 func _on_game_paused() -> void:
 	show()
+	resume_bttn.grab_focus()
 
 
 func _on_game_unpaused() -> void:

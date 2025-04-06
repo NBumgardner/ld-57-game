@@ -95,9 +95,9 @@ position = Vector2(-370, -88)
 position = Vector2(-32, 36)
 
 [node name="Briecheese" type="Sprite2D" parent="."]
-position = Vector2(183, -96)
+position = Vector2(85, -65)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("4_eeevt")
 
 [node name="CatTrap" parent="." instance=ExtResource("6_eeevt")]
-position = Vector2(-274, -110)
+position = Vector2(-49, -19)
