@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://bsorpho2v6tjy" path="res://assets/textures/Wall C.png" id="1_qwc5i"]
 
-[node name="StaticBody2D" type="StaticBody2D"]
+[node name="Wall001" type="StaticBody2D"]
 
-[node name="WallA" type="Sprite2D" parent="."]
+[node name="WallC" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 1.04144)
 texture = ExtResource("1_qwc5i")
 
