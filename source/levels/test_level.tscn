@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://db6upx7yhxsjs"]
+[gd_scene load_steps=10 format=3 uid="uid://db6upx7yhxsjs"]
 
 [ext_resource type="Script" uid="uid://cs7fkoyeupiik" path="res://source/levels/level.gd" id="1_u5bq0"]
 [ext_resource type="Texture2D" uid="uid://bnqw2jdhtxxli" path="res://assets/textures/BoxGradient.png" id="2_a1lpf"]
 [ext_resource type="PackedScene" uid="uid://dx3hj00udpdbk" path="res://source/objects/ladder/Ladder.tscn" id="2_epmhw"]
-[ext_resource type="Texture2D" uid="uid://c58qfw0cqjm70" path="res://assets/textures/CircleGradient.png" id="3_a1lpf"]
 [ext_resource type="Texture2D" uid="uid://b8x7ax4g4x724" path="res://assets/textures/Briecheese.png" id="4_eeevt"]
 [ext_resource type="PackedScene" uid="uid://bi4xnp24pulp0" path="res://source/objects/cat/cat_trap.tscn" id="6_eeevt"]
 
@@ -23,7 +22,7 @@ gradient = SubResource("Gradient_uvrxi")
 fill_from = Vector2(0, 1)
 fill_to = Vector2(0, 0)
 
-[node name="TestLevel" type="Node2D" node_paths=PackedStringArray("player_spawn_point")]
+[node name="TestLevel2" type="Node2D" node_paths=PackedStringArray("player_spawn_point")]
 process_mode = 4
 script = ExtResource("1_u5bq0")
 player_spawn_point = NodePath("SpawnPoint")
@@ -94,13 +93,6 @@ position = Vector2(-370, -88)
 
 [node name="Ladder" parent="." instance=ExtResource("2_epmhw")]
 position = Vector2(-32, 36)
-
-[node name="PointLight2D" type="Sprite2D" parent="."]
-modulate = Color(0.89, 0.8366, 0.7298, 0.207843)
-z_index = -1
-position = Vector2(217, -75)
-scale = Vector2(1.54688, 0.733826)
-texture = ExtResource("3_a1lpf")
 
 [node name="Briecheese" type="Sprite2D" parent="."]
 position = Vector2(183, -96)

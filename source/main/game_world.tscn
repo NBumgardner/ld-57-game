@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://cewy6y7gv5w8l"]
+
+[ext_resource type="PackedScene" uid="uid://db6upx7yhxsjs" path="res://source/levels/test_level.tscn" id="1_3t1xq"]
+[ext_resource type="Script" uid="uid://dw41eu1fiju47" path="res://source/main/game_world.gd" id="1_6m16l"]
+[ext_resource type="PackedScene" uid="uid://cbb4ib7lqcrfb" path="res://source/player/Player.tscn" id="2_6m16l"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_n3iyj"]
+
+[node name="GameWorld" type="Node2D" node_paths=PackedStringArray("current_level", "game_camera", "player")]
+z_as_relative = false
+y_sort_enabled = true
+script = ExtResource("1_6m16l")
+current_level = NodePath("TestLevel")
+game_camera = NodePath("GameCamera")
+player = NodePath("Player")
+
+[node name="TestLevel" parent="." instance=ExtResource("1_3t1xq")]
+
+[node name="Borders" type="StaticBody2D" parent="."]
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="Bottom" type="CollisionShape2D" parent="Borders"]
+position = Vector2(0, 281)
+shape = SubResource("WorldBoundaryShape2D_n3iyj")
+metadata/_edit_lock_ = true
+
+[node name="Top" type="CollisionShape2D" parent="Borders"]
+position = Vector2(0, -191)
+rotation = 3.14159
+shape = SubResource("WorldBoundaryShape2D_n3iyj")
+metadata/_edit_lock_ = true
+
+[node name="Left" type="CollisionShape2D" parent="Borders"]
+position = Vector2(-518, 0)
+rotation = 1.79209
+shape = SubResource("WorldBoundaryShape2D_n3iyj")
+metadata/_edit_lock_ = true
+
+[node name="Left2" type="CollisionShape2D" parent="Borders"]
+position = Vector2(518, 0)
+rotation = -1.79245
+shape = SubResource("WorldBoundaryShape2D_n3iyj")
+metadata/_edit_lock_ = true
+
+[node name="GameCamera" type="Camera2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." instance=ExtResource("2_6m16l")]
+z_as_relative = false
+position = Vector2(-254, 51)

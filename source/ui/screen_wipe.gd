@@ -5,6 +5,10 @@ extends Control
 @onready var animation: AnimationPlayer = $AnimationPlayer
 
 
+func _ready() -> void:
+	Events.transitioning_to_new_level.connect(wipe_start)
+
+
 func wipe_start() -> void:
 	animation.play("cover")
 	await animation.animation_finished
