@@ -7,9 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://c3vyypduivhgk" path="res://source/ui/screen_wipe.tscn" id="6_qkuhj"]
 
 [node name="Main" type="Node"]
+process_mode = 3
 script = ExtResource("1_nevys")
 
 [node name="GameWorld" parent="." instance=ExtResource("2_2a4ee")]
+process_mode = 1
 
 [node name="UI" type="CanvasLayer" parent="."]
 

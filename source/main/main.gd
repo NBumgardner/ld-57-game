@@ -1,14 +1,16 @@
 extends Node
 
 var fullscreen : bool = false
-var game_camera_next_floor_distance_initial_y = 120
-var game_camera_next_floor_distance_y : float
-var game_camera_next_floor_distance_divisor_y = 2
+#var game_camera_next_floor_distance_initial_y = 120
+#var game_camera_next_floor_distance_y : float
+#var game_camera_next_floor_distance_divisor_y = 2
 
 
 func _ready() -> void:
-	game_camera_next_floor_distance_y = game_camera_next_floor_distance_initial_y
+	#game_camera_next_floor_distance_y = game_camera_next_floor_distance_initial_y
 	Database.load_values()
+	Events.game_paused.connect(_on_game_paused)
+	Events.game_unpaused.connect(_on_game_unpaused)
 
 
 func _input(event: InputEvent) -> void:
@@ -22,10 +24,17 @@ func _input(event: InputEvent) -> void:
 	elif event.is_action_pressed("pause"):
 		if get_tree().paused == true:
 			Events.game_unpaused.emit()
-			get_tree().paused = false
 		else:
 			Events.game_paused.emit()
-			get_tree().paused = true
+
+
+func _on_game_paused() -> void:
+	get_tree().paused = true
+
+
+func _on_game_unpaused() -> void:
+	get_tree().paused = false
+
 
 	#if event.is_action_pressed("debug_skip_down"):
 		#print_debug("Debug skip to next lower floor.")
