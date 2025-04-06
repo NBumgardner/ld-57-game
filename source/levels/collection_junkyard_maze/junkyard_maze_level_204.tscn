@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://ukd0iqfs515h"]
+[gd_scene load_steps=12 format=3 uid="uid://ukd0iqfs515h"]
 
 [ext_resource type="Script" uid="uid://cs7fkoyeupiik" path="res://source/levels/level.gd" id="1_8ansm"]
 [ext_resource type="Texture2D" uid="uid://bnqw2jdhtxxli" path="res://assets/textures/BoxGradient.png" id="2_i3nxy"]
 [ext_resource type="PackedScene" uid="uid://dx3hj00udpdbk" path="res://source/objects/ladder/Ladder.tscn" id="3_yfvq1"]
 [ext_resource type="PackedScene" uid="uid://bi4xnp24pulp0" path="res://source/objects/cat/cat_trap.tscn" id="4_0t14f"]
 [ext_resource type="PackedScene" uid="uid://dpe634571k2ll" path="res://source/objects/cheese/cheese.tscn" id="5_qh4ng"]
+[ext_resource type="PackedScene" uid="uid://d4k3wt7qv7x2r" path="res://source/objects/walls/wall_002.tscn" id="6_yfvq1"]
+[ext_resource type="PackedScene" uid="uid://t841wjrlo7xk" path="res://source/objects/walls/wall_003.tscn" id="7_0t14f"]
 
 [sub_resource type="Gradient" id="Gradient_eeevt"]
 offsets = PackedFloat32Array(0, 0.465753, 0.972603)
@@ -95,7 +97,40 @@ position = Vector2(-391, 195)
 position = Vector2(-369, -129)
 
 [node name="CatTrap" parent="." instance=ExtResource("4_0t14f")]
-position = Vector2(-49, -19)
+position = Vector2(-103, -59)
+
+[node name="CatTrap2" parent="." instance=ExtResource("4_0t14f")]
+position = Vector2(336, 227)
 
 [node name="Cheese" parent="." instance=ExtResource("5_qh4ng")]
-position = Vector2(216, 47)
+position = Vector2(-104, 236)
+
+[node name="Cheese2" parent="." instance=ExtResource("5_qh4ng")]
+position = Vector2(505, 230)
+
+[node name="Wall002" parent="." instance=ExtResource("6_yfvq1")]
+position = Vector2(445, -116)
+
+[node name="Wall008" parent="." instance=ExtResource("6_yfvq1")]
+position = Vector2(150, 171)
+
+[node name="Wall006" parent="." instance=ExtResource("6_yfvq1")]
+position = Vector2(-273, 225)
+scale = Vector2(0.5, 0.5)
+
+[node name="Wall007" parent="." instance=ExtResource("6_yfvq1")]
+position = Vector2(-200, 225)
+scale = Vector2(0.5, 0.5)
+
+[node name="Wall003" parent="." instance=ExtResource("7_0t14f")]
+position = Vector2(-479, 19)
+
+[node name="Wall004" parent="." instance=ExtResource("7_0t14f")]
+position = Vector2(-479, 63)
+
+[node name="Wall009" parent="." instance=ExtResource("7_0t14f")]
+position = Vector2(293, -145)
+
+[node name="Wall005" parent="." instance=ExtResource("7_0t14f")]
+position = Vector2(-310, -2)
+rotation = 1.5708
