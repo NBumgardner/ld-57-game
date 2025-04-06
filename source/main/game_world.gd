@@ -27,5 +27,5 @@ func load_next_level() -> void:
 	
 	if old_level: old_level.queue_free()
 	new_level.call_deferred("start_level")
-	#player.global_position = new_level.player_spawn_point.global_position
+	player.global_position = new_level.player_spawn_point.global_position
 	player.set_deferred("process_mode", PROCESS_MODE_INHERIT)
