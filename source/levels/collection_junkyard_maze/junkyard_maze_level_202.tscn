@@ -89,10 +89,10 @@ uv = PackedVector2Array(-3.57628e-06, 0, 64, 0, 64, 64, -1.90735e-06, 64)
 metadata/_edit_lock_ = true
 
 [node name="SpawnPoint" type="Marker2D" parent="."]
-position = Vector2(-370, -88)
+position = Vector2(346, -87)
 
 [node name="Ladder" parent="." instance=ExtResource("3_vabe4")]
-position = Vector2(341, -118)
+position = Vector2(372, 188)
 
 [node name="CatTrap" parent="." instance=ExtResource("4_14iy8")]
 position = Vector2(-49, -19)
