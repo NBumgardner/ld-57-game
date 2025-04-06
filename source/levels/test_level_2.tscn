@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://u3jm18svt6fb" path="res://assets/textures/Trap.png" id="5_mpttg"]
 [ext_resource type="PackedScene" uid="uid://dpe634571k2ll" path="res://source/objects/cheese/cheese.tscn" id="5_nuefy"]
 [ext_resource type="PackedScene" uid="uid://bi4xnp24pulp0" path="res://source/objects/cat/cat_trap.tscn" id="6_mpttg"]
-[ext_resource type="Texture2D" uid="uid://bsorpho2v6tjy" path="res://assets/textures/Wall C.png" id="7_qrs6x"]
+[ext_resource type="PackedScene" uid="uid://c36evp11guevb" path="res://source/objects/walls/wall_001.tscn" id="7_qrs6x"]
 
 [sub_resource type="Gradient" id="Gradient_h5hv5"]
 offsets = PackedFloat32Array(0, 0.465753, 0.972603)
@@ -106,14 +106,4 @@ texture = ExtResource("5_mpttg")
 [node name="Cheese" parent="." instance=ExtResource("5_nuefy")]
 position = Vector2(264, -70)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="WallA" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(-170, -93.375)
-scale = Vector2(0.5, 1.04144)
-texture = ExtResource("7_qrs6x")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-position = Vector2(-170, -93.375)
-scale = Vector2(0.5, 1.04144)
-polygon = PackedVector2Array(-75.5, -93.5, -75.5, 93.5, 75.5, 93.5, 75.5, -93.5)
+[node name="StaticBody2D" parent="." instance=ExtResource("7_qrs6x")]
