@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://b5obxxpq24b4r"]
+[gd_scene load_steps=11 format=3 uid="uid://b5obxxpq24b4r"]
 
 [ext_resource type="Script" uid="uid://cs7fkoyeupiik" path="res://source/levels/level.gd" id="1_3xyt4"]
 [ext_resource type="Texture2D" uid="uid://bnqw2jdhtxxli" path="res://assets/textures/BoxGradient.png" id="2_eiae1"]
 [ext_resource type="PackedScene" uid="uid://dx3hj00udpdbk" path="res://source/objects/ladder/Ladder.tscn" id="3_k04w2"]
 [ext_resource type="PackedScene" uid="uid://bi4xnp24pulp0" path="res://source/objects/cat/cat_trap.tscn" id="4_uonib"]
 [ext_resource type="PackedScene" uid="uid://dpe634571k2ll" path="res://source/objects/cheese/cheese.tscn" id="5_3b264"]
+[ext_resource type="PackedScene" uid="uid://d4k3wt7qv7x2r" path="res://source/objects/walls/wall_002.tscn" id="6_eiae1"]
 
 [sub_resource type="Gradient" id="Gradient_eeevt"]
 offsets = PackedFloat32Array(0, 0.465753, 0.972603)
@@ -95,7 +96,41 @@ position = Vector2(361, 190)
 position = Vector2(-384, 159)
 
 [node name="CatTrap" parent="." instance=ExtResource("4_uonib")]
-position = Vector2(-49, -19)
+position = Vector2(-143, -124)
+
+[node name="CatTrap2" parent="." instance=ExtResource("4_uonib")]
+position = Vector2(-260, 40)
+
+[node name="CatTrap3" parent="." instance=ExtResource("4_uonib")]
+position = Vector2(256, -120)
+
+[node name="CatTrap4" parent="." instance=ExtResource("4_uonib")]
+position = Vector2(191, 62)
 
 [node name="Cheese" parent="." instance=ExtResource("5_3b264")]
-position = Vector2(216, 47)
+position = Vector2(61, -130)
+
+[node name="Cheese2" parent="." instance=ExtResource("5_3b264")]
+position = Vector2(-134, 187)
+
+[node name="Wall002" parent="." instance=ExtResource("6_eiae1")]
+position = Vector2(-435, -155)
+
+[node name="Wall003" parent="." instance=ExtResource("6_eiae1")]
+position = Vector2(509, 170)
+
+[node name="Wall004" parent="." instance=ExtResource("6_eiae1")]
+position = Vector2(-134, 77)
+scale = Vector2(0.5, 0.5)
+
+[node name="Wall007" parent="." instance=ExtResource("6_eiae1")]
+position = Vector2(-134, -31)
+scale = Vector2(0.5, 0.5)
+
+[node name="Wall005" parent="." instance=ExtResource("6_eiae1")]
+position = Vector2(460, -147)
+scale = Vector2(0.5, 0.5)
+
+[node name="Wall006" parent="." instance=ExtResource("6_eiae1")]
+position = Vector2(396, 57)
+scale = Vector2(0.5, 0.5)
