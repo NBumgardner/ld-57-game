@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://en4thahmqx8v"]
+[gd_scene load_steps=11 format=3 uid="uid://en4thahmqx8v"]
 
 [ext_resource type="Script" uid="uid://cs7fkoyeupiik" path="res://source/levels/level.gd" id="1_st4jt"]
 [ext_resource type="Texture2D" uid="uid://bnqw2jdhtxxli" path="res://assets/textures/BoxGradient.png" id="2_td06m"]
 [ext_resource type="PackedScene" uid="uid://dx3hj00udpdbk" path="res://source/objects/ladder/Ladder.tscn" id="3_vabe4"]
 [ext_resource type="PackedScene" uid="uid://bi4xnp24pulp0" path="res://source/objects/cat/cat_trap.tscn" id="4_14iy8"]
 [ext_resource type="PackedScene" uid="uid://dpe634571k2ll" path="res://source/objects/cheese/cheese.tscn" id="5_rmyg8"]
+[ext_resource type="PackedScene" uid="uid://d4k3wt7qv7x2r" path="res://source/objects/walls/wall_002.tscn" id="6_td06m"]
 
 [sub_resource type="Gradient" id="Gradient_eeevt"]
 offsets = PackedFloat32Array(0, 0.465753, 0.972603)
@@ -95,7 +96,48 @@ position = Vector2(346, -87)
 position = Vector2(372, 188)
 
 [node name="CatTrap" parent="." instance=ExtResource("4_14iy8")]
-position = Vector2(-49, -19)
+position = Vector2(141, -120)
 
 [node name="Cheese" parent="." instance=ExtResource("5_rmyg8")]
-position = Vector2(216, 47)
+position = Vector2(-35, -89)
+
+[node name="Cheese2" parent="." instance=ExtResource("5_rmyg8")]
+position = Vector2(-461, 198)
+
+[node name="Wall002" parent="." instance=ExtResource("6_td06m")]
+position = Vector2(479, 48)
+
+[node name="Wall011" parent="." instance=ExtResource("6_td06m")]
+position = Vector2(-263, 48)
+
+[node name="Wall003" parent="." instance=ExtResource("6_td06m")]
+position = Vector2(367, 101)
+scale = Vector2(0.5, 0.5)
+
+[node name="Wall004" parent="." instance=ExtResource("6_td06m")]
+position = Vector2(294, 101)
+scale = Vector2(0.5, 0.5)
+
+[node name="Wall005" parent="." instance=ExtResource("6_td06m")]
+position = Vector2(222, 101)
+scale = Vector2(0.5, 0.5)
+
+[node name="Wall006" parent="." instance=ExtResource("6_td06m")]
+position = Vector2(147, 101)
+scale = Vector2(0.5, 0.5)
+
+[node name="Wall007" parent="." instance=ExtResource("6_td06m")]
+position = Vector2(74, 101)
+scale = Vector2(0.5, 0.5)
+
+[node name="Wall008" parent="." instance=ExtResource("6_td06m")]
+position = Vector2(-2, 101)
+scale = Vector2(0.5, 0.5)
+
+[node name="Wall009" parent="." instance=ExtResource("6_td06m")]
+position = Vector2(-74, 101)
+scale = Vector2(0.5, 0.5)
+
+[node name="Wall010" parent="." instance=ExtResource("6_td06m")]
+position = Vector2(-150, 101)
+scale = Vector2(0.5, 0.5)
