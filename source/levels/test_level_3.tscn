@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://hk6px0ejjy22"]
+[gd_scene load_steps=11 format=3 uid="uid://hk6px0ejjy22"]
 
 [ext_resource type="Script" uid="uid://cs7fkoyeupiik" path="res://source/levels/level.gd" id="1_5012v"]
 [ext_resource type="Texture2D" uid="uid://bnqw2jdhtxxli" path="res://assets/textures/BoxGradient.png" id="2_1g0tk"]
 [ext_resource type="PackedScene" uid="uid://dx3hj00udpdbk" path="res://source/objects/ladder/Ladder.tscn" id="3_blm3s"]
 [ext_resource type="PackedScene" uid="uid://bi4xnp24pulp0" path="res://source/objects/cat/cat_trap.tscn" id="4_6mbm7"]
 [ext_resource type="PackedScene" uid="uid://dpe634571k2ll" path="res://source/objects/cheese/cheese.tscn" id="5_ebco8"]
+[ext_resource type="Texture2D" uid="uid://dbift1wm4opn2" path="res://assets/placeholder/wall_c_2_plastic_rings.png" id="6_1g0tk"]
 
 [sub_resource type="Gradient" id="Gradient_eeevt"]
 offsets = PackedFloat32Array(0, 0.465753, 0.972603)
@@ -99,3 +100,29 @@ position = Vector2(-49, -19)
 
 [node name="Cheese" parent="." instance=ExtResource("5_ebco8")]
 position = Vector2(216, 47)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="WallC" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(-170, -93.375)
+scale = Vector2(0.5, 1.04144)
+texture = ExtResource("6_1g0tk")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-170, -93.375)
+scale = Vector2(0.5, 1.04144)
+polygon = PackedVector2Array(-75.5, -93.5, -75.5, 93.5, 75.5, 93.5, 75.5, -93.5)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="WallC" type="Sprite2D" parent="StaticBody2D2"]
+position = Vector2(-291, 5)
+rotation = -1.5708
+scale = Vector2(0.5, 1.04144)
+texture = ExtResource("6_1g0tk")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
+position = Vector2(-291, 5)
+rotation = -1.5708
+scale = Vector2(0.5, 1.04144)
+polygon = PackedVector2Array(-75.5, -93.5, -75.5, 93.5, 75.5, 93.5, 75.5, -93.5)
