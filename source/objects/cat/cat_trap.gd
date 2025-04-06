@@ -9,6 +9,7 @@ extends Area2D
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered_area)
+	cat_hand.hide()
 
 
 func _on_body_entered_area(body: Node2D) -> void:
