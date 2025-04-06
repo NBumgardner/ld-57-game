@@ -11,6 +11,7 @@ extends Control
 func _ready():
 	Database.floor_count_changed.connect(_on_floor_changed)
 	Database.health_changed.connect(_set_health_text)
+	Database.cheese_count_changed.connect(_on_cheese_count_changed)
 	_set_health_text(Database.player_health_current)
 
 
@@ -20,3 +21,7 @@ func _set_health_text(new_health: int, _old_health: int = 0) -> void:
 
 func _on_floor_changed(new_floor_count : int = 1) -> void:
 	floor_count_amount_display.text = str(new_floor_count)
+
+
+func _on_cheese_count_changed(new_cheese_count : int = 0) -> void:
+	cheese_count.text = str(new_cheese_count)

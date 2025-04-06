@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpe634571k2ll"]
+
+[ext_resource type="Script" uid="uid://nrrskhkmu3c7" path="res://source/objects/cheese/cheese.gd" id="1_fnebq"]
+[ext_resource type="Texture2D" uid="uid://b8x7ax4g4x724" path="res://assets/textures/Briecheese.png" id="1_unod1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fnebq"]
+radius = 13.0
+height = 54.0
+
+[node name="Cheese" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("1_fnebq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_unod1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 7)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_fnebq")
+debug_color = Color(0.836533, 0.713541, 0, 0.0431373)
