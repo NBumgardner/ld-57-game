@@ -5,11 +5,9 @@
 [node name="StaticBody2D" type="StaticBody2D"]
 
 [node name="WallA" type="Sprite2D" parent="."]
-position = Vector2(-170, -93.375)
 scale = Vector2(0.5, 1.04144)
 texture = ExtResource("1_qwc5i")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(-170, -93.375)
 scale = Vector2(0.5, 1.04144)
 polygon = PackedVector2Array(-75.5, -93.5, -75.5, 93.5, 75.5, 93.5, 75.5, -93.5)
