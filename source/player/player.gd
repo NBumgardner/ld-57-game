@@ -20,10 +20,6 @@ func _ready() -> void:
 	Events.level_transition_completed.connect(_on_level_transition_ended)
 
 
-func _process(_elta: float) -> void:
-	pass
-
-
 func _physics_process(_delta: float) -> void:
 	if not(can_move):
 		return 
@@ -77,4 +73,4 @@ func enter_state(new_state : STATE) -> void:
 			sprite.animation = "walking"
 		
 		_:
-			print("??")
+			printerr("Attempting to enter invalid state")

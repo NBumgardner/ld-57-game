@@ -5,6 +5,7 @@ extends Area2D
 @onready var spot_light: Sprite2D = $SpotLight
 @onready var animation: AnimationPlayer = $AnimationPlayer
 
+@export var damage : float = 2
 @export var trap_ready : bool = true
 
 func _ready() -> void:
@@ -12,6 +13,10 @@ func _ready() -> void:
 	cat_hand.hide()
 
 
-func _on_body_entered_area(body: Node2D) -> void:
-	if trap_ready and body is Player:
+func _on_body_entered_area(_body: Node2D) -> void:
+	if trap_ready:
 		animation.play("drop_hand")
+
+
+func _on_hand_drop_finished() -> void:
+	pass

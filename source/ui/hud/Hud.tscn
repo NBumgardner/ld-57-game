@@ -2,20 +2,25 @@
 
 [ext_resource type="Script" uid="uid://cnkyq0oftu215" path="res://source/ui/hud/hud.gd" id="1_tknoo"]
 
-[node name="Hud" type="Control"]
+[node name="Hud" type="MarginContainer"]
 process_mode = 1
-layout_mode = 3
+z_index = -2
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
 script = ExtResource("1_tknoo")
 
-[node name="TopGameStatus" type="VBoxContainer" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="TopGameStatus" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/separation = 80
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TopGameStatus"]
 layout_mode = 2

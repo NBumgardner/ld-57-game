@@ -7,9 +7,9 @@ func _ready() -> void:
 
 
 func _on_body_entered_area(_body : Node2D) -> void:
-	set_deferred("monitoring", false)
 	Database.cheese_count += 1
 	hide()
+	set_deferred("monitoring", false)
 	sfx_nibble.play()
 	await sfx_nibble.finished
 	queue_free()
