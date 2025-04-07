@@ -1,0 +1,9 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=2 format=3 uid="uid://cc85yetdrp6w2"]
+
+[ext_resource type="AudioStream" uid="uid://b4xxfejat6bop" path="res://assets/audio/sfx/sfx_201_mouse_trap_snap.wav" id="1_3vrrh"]
+
+[resource]
+random_pitch = 1.1
+random_volume_offset_db = 0.2
+streams_count = 1
+stream_0/stream = ExtResource("1_3vrrh")

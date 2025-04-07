@@ -1,0 +1,165 @@
+[gd_scene load_steps=13 format=3 uid="uid://dx584vm0bf5h7"]
+
+[ext_resource type="Texture2D" uid="uid://gr0d073jjhb" path="res://assets/textures/trap/Trap.png" id="1_dhjhq"]
+[ext_resource type="Script" uid="uid://cl5gvyxn3368b" path="res://source/objects/snap_trap/snap_trap.gd" id="1_osnl0"]
+[ext_resource type="Texture2D" uid="uid://ciy0li30m57fk" path="res://assets/textures/trap/Traptriggered1.png" id="2_osnl0"]
+[ext_resource type="Texture2D" uid="uid://bipmgsoe3vdho" path="res://assets/textures/trap/Traptriggered2.png" id="3_s6ef3"]
+[ext_resource type="Texture2D" uid="uid://shhscurakw1e" path="res://assets/textures/trap/Traptriggered3.png" id="4_ipokw"]
+[ext_resource type="Texture2D" uid="uid://ege8j4k4n5nr" path="res://assets/textures/trap/Traptriggered4.png" id="5_awowy"]
+[ext_resource type="AudioStream" uid="uid://cc85yetdrp6w2" path="res://assets/audio/snap_trap_randomizer.tres" id="7_s6ef3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5n6jr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dhjhq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_osnl0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_s6ef3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ipokw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_awowy")
+}],
+"loop": true,
+"name": &"trigger",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mwf4w"]
+size = Vector2(67.5, 30)
+
+[sub_resource type="Animation" id="Animation_s6ef3"]
+resource_name = "snap"
+length = 0.9
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"trigger"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.266667, 0.5, 0.733333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SFX|Snap")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("7_s6ef3")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/2/use_blend = true
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:damage_ready")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.65),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+
+[sub_resource type="Animation" id="Animation_ipokw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"default"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:damage_ready")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ipokw"]
+_data = {
+&"RESET": SubResource("Animation_ipokw"),
+&"snap": SubResource("Animation_s6ef3")
+}
+
+[node name="SnapTrap" type="Area2D"]
+z_index = -1
+collision_layer = 4
+collision_mask = 2
+monitorable = false
+script = ExtResource("1_osnl0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_5n6jr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-32.25, 17)
+shape = SubResource("RectangleShape2D_mwf4w")
+debug_color = Color(0.993, 0, 0.248, 0.196)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ipokw")
+}
+
+[node name="SFX|Snap" type="AudioStreamPlayer2D" parent="."]
+volume_db = 4.0
+bus = &"Sound Effects"
