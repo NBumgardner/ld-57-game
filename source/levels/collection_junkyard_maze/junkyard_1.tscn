@@ -12,7 +12,7 @@ position = Vector2(-370, -87.5)
 
 [node name="Ladder" parent="Objects" index="1"]
 position = Vector2(341.25, -117.5)
-next_level_filepath = "uid://b0btl83id1dtk"
+next_level_filepath = "uid://c6064o7s4tlqc"
 
 [node name="CatTrap" parent="Objects" index="2" instance=ExtResource("2_k4h0x")]
 position = Vector2(103, -133)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dso0pgvxumots"]
+[gd_scene load_steps=5 format=3 uid="uid://c6064o7s4tlqc"]
 
 [ext_resource type="PackedScene" uid="uid://6ujytfaku6kd" path="res://source/levels/level_template.tscn" id="1_g45n0"]
 [ext_resource type="PackedScene" uid="uid://bi4xnp24pulp0" path="res://source/objects/cat/cat_trap.tscn" id="2_f0pwb"]
@@ -12,7 +12,7 @@ position = Vector2(346.25, -86.25)
 
 [node name="Ladder" parent="Objects" index="1"]
 position = Vector2(375, 211.25)
-next_level_filepath = "uid://b0btl83id1dtk"
+next_level_filepath = "uid://k23mrx7gkxrg"
 
 [node name="CatTrap" parent="Objects" index="2" instance=ExtResource("2_f0pwb")]
 position = Vector2(141, -120)
