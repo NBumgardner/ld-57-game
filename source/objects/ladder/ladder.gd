@@ -1,3 +1,4 @@
+class_name Ladder
 extends Area2D
 
 ## Insert a UID to the next level. 
@@ -6,7 +7,6 @@ extends Area2D
 
 
 func _ready() -> void:
-	set_deferred("monitoring", true)
 	body_entered.connect(_on_body_entered_area)
 
 

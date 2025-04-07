@@ -1,15 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://cmhs4ktd6ptg5"]
+[gd_scene load_steps=4 format=3 uid="uid://cmhs4ktd6ptg5"]
 
 [ext_resource type="PackedScene" uid="uid://6ujytfaku6kd" path="res://source/levels/level_template.tscn" id="1_lb7lo"]
 [ext_resource type="PackedScene" uid="uid://bi4xnp24pulp0" path="res://source/objects/cat/cat_trap.tscn" id="2_cw8dd"]
+[ext_resource type="Texture2D" uid="uid://b8x7ax4g4x724" path="res://assets/textures/Briecheese.png" id="3_po5og"]
 
 [node name="TemplateTest" instance=ExtResource("1_lb7lo")]
 
-[node name="Objects" parent="." index="2"]
-position = Vector2(-165, -68)
+[node name="PlayerSpawnPoint" parent="Objects" index="0"]
+position = Vector2(-81.25, 85)
+scale = Vector2(1.25, 1.25)
 
-[node name="CatTrap" parent="Objects" index="1" instance=ExtResource("2_cw8dd")]
-position = Vector2(577.5, 82.5)
+[node name="SpotLight" parent="Objects/PlayerSpawnPoint" index="0"]
+modulate = Color(0, 0, 0, 0.207843)
 
-[node name="Ladder" parent="Objects" index="2"]
+[node name="Ladder" parent="Objects" index="1"]
 next_level_filepath = "uid://dju73xpfvuytb"
+
+[node name="CatTrap" parent="Objects" index="2" instance=ExtResource("2_cw8dd")]
+position = Vector2(577.5, 82.5)
+scale = Vector2(1, 1)
+
+[node name="Briecheese" type="Sprite2D" parent="." index="3"]
+position = Vector2(-20, 121)
+scale = Vector2(1, 0.24)
+texture = ExtResource("3_po5og")

@@ -7,11 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://c58qfw0cqjm70" path="res://assets/textures/CircleGradient.png" id="4_6rnss"]
 
 [node name="LevelTemplate" type="Node2D" node_paths=PackedStringArray("player_spawn_point", "animation", "objects")]
-modulate = Color(0, 0, 0, 1)
 z_as_relative = false
 y_sort_enabled = true
-position = Vector2(0, 450)
-scale = Vector2(0.47, 0.47)
 script = ExtResource("1_mtyep")
 player_spawn_point = NodePath("Objects/PlayerSpawnPoint")
 animation = NodePath("AnimationPlayer")
@@ -41,7 +38,7 @@ gizmo_extents = 15.0
 [node name="SpotLight" type="Sprite2D" parent="Objects/PlayerSpawnPoint"]
 modulate = Color(0, 0, 0, 0.207843)
 z_index = -1
-scale = Vector2(1, 0.474)
+scale = Vector2(0.8, 0.379)
 texture = ExtResource("4_6rnss")
 
 [node name="Ladder" parent="Objects" instance=ExtResource("4_5uc0g")]

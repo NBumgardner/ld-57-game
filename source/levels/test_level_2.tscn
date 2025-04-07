@@ -5,8 +5,12 @@
 
 [node name="TemplateTest" instance=ExtResource("1_nlhwm")]
 
-[node name="Objects" parent="." index="2"]
-position = Vector2(-165, -68)
+[node name="PlayerSpawnPoint" parent="Objects" index="0"]
+position = Vector2(-81.25, 85)
+scale = Vector2(1.25, 1.25)
+
+[node name="SpotLight" parent="Objects/PlayerSpawnPoint" index="0"]
+modulate = Color(0, 0, 0, 0.207843)
 
 [node name="CatTrap" parent="Objects" index="1" instance=ExtResource("6_mpttg")]
 position = Vector2(-312.5, 252.5)
