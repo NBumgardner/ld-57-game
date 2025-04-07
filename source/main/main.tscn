@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dnej1lg77q1me" path="res://source/ui/title_screen.tscn" id="3_2a4ee"]
 [ext_resource type="PackedScene" uid="uid://b850ghjahait8" path="res://source/ui/hud/Hud.tscn" id="5_2a4ee"]
 [ext_resource type="PackedScene" uid="uid://fu2qbtcnrita" path="res://source/ui/pause_menu.tscn" id="6_420hx"]
-[ext_resource type="PackedScene" uid="uid://dkr68fc527mn8" path="res://source/ui/Game_over_screen.tscn" id="6_qkuhj"]
+[ext_resource type="PackedScene" uid="uid://b6n4i8bdfotkl" path="res://source/ui/Game_over_screen.tscn" id="6_qkuhj"]
 
 [node name="Main" type="Node"]
 process_mode = 3
