@@ -26,7 +26,6 @@ buses/default_bus_layout="uid://cf1kouuuqdfjn"
 Database="*res://source/globals/data/database.gd"
 Events="*res://source/globals/event_bus.gd"
 AudioManager="*res://source/globals/AudioManager.tscn"
-SoundManager="*res://addons/sound_manager/sound_manager.gd"
 
 [debug]
 
@@ -35,10 +34,6 @@ gdscript/warnings/unused_signal=0
 [display]
 
 window/stretch/mode="canvas_items"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/sound_manager/plugin.cfg")
 
 [file_customization]
 
