@@ -1,52 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://dbhoxafd1hwba"]
+[gd_scene load_steps=3 format=3 uid="uid://cin58y8pixpfs"]
 
 [ext_resource type="Script" uid="uid://o1tcygi8u40c" path="res://source/globals/audio_manager.gd" id="1_edqxi"]
-[ext_resource type="AudioStream" uid="uid://sp6yc78raoda" path="res://assets/audio/001_loop_music.ogg" id="2_va7d0"]
-
-[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_edqxi"]
-mix_rate = 20.0
-buffer_length = 0.01
-
-[sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_kloir"]
-fade_time = 0.1
-stream_count = 1
-stream_0 = ExtResource("2_va7d0")
-
-[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_va7d0"]
-clip_count = 2
-clip_0/name = &"Silence"
-clip_0/stream = SubResource("AudioStreamGenerator_edqxi")
-clip_0/auto_advance = 0
-clip_1/name = &"Track 1"
-clip_1/stream = SubResource("AudioStreamPlaylist_kloir")
-clip_1/auto_advance = 0
-_transitions = {
-Vector2i(-1, -1): {
-"fade_beats": 1.0,
-"fade_mode": 3,
-"from_time": 0,
-"to_time": 1
-},
-Vector2i(-1, 0): {
-"fade_beats": 1.0,
-"fade_mode": 2,
-"from_time": 0,
-"to_time": 1
-},
-Vector2i(0, -1): {
-"fade_beats": 1.0,
-"fade_mode": 0,
-"from_time": 0,
-"to_time": 1
-}
-}
+[ext_resource type="AudioStream" uid="uid://bok4mhwxs0n7g" path="res://assets/audio/002_game_music_interactive.tres" id="2_va7d0"]
 
 [node name="AudioManager" type="Node"]
 process_mode = 3
 script = ExtResource("1_edqxi")
 
 [node name="GameMusic" type="AudioStreamPlayer" parent="."]
-stream = SubResource("AudioStreamInteractive_va7d0")
+stream = ExtResource("2_va7d0")
 volume_db = -6.0
 autoplay = true
-bus = &"Music"
