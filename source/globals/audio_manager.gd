@@ -5,6 +5,7 @@ extends Node
 func _ready() -> void:
 	Events.game_paused.connect(_on_game_paused)
 	Events.game_unpaused.connect(_on_game_unpaused)
+	game_music.play()
 	set_game_music("Track 1")
 
 

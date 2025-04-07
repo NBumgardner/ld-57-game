@@ -25,7 +25,7 @@ func _process(_delta: float) -> void:
 
 
 #region Loading
-func load_level(level_path : String = "uid://dju73xpfvuytb") -> void:
+func load_level(level_path : String = "uid://6ujytfaku6kd") -> void:
 	if level_path == "":
 		printerr("Provided file path is blank")
 		reset_load_status()
