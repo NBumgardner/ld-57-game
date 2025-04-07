@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://fu2qbtcnrita"]
 
 [ext_resource type="Script" uid="uid://mgnjsof4t4wi" path="res://source/ui/pause_menu.gd" id="1_pseub"]
-[ext_resource type="Script" uid="uid://cpmo3tlylmfs2" path="res://source/ui/audio_h_slider.gd" id="2_5vpx4"]
+[ext_resource type="Script" uid="uid://cpmo3tlylmfs2" path="res://source/ui/custom_elements/audio_h_slider.gd" id="2_5vpx4"]
 
 [node name="PauseMenu" type="Control"]
 process_mode = 2
