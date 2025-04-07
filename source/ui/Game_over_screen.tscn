@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dkr68fc527mn8"]
+[gd_scene load_steps=3 format=3 uid="uid://b6n4i8bdfotkl"]
 
 [ext_resource type="Script" uid="uid://8b25hx3yxr8e" path="res://source/ui/game_over_screen.gd" id="1_kcqwk"]
+[ext_resource type="Texture2D" uid="uid://qe5phbmgdxt3" path="res://assets/placeholder/chef_cat.png" id="2_3rnon"]
 
 [node name="GameOverScreen" type="Control"]
 layout_mode = 3
@@ -21,18 +22,59 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.223)
 
-[node name="RestartButton" type="Button" parent="."]
-unique_name_in_owner = true
+[node name="ReferencePointCenter" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -54.0
-offset_top = -23.0
-offset_right = 54.0
-offset_bottom = 23.0
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="ReferencePointCenter"]
+texture = ExtResource("2_3rnon")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -81.0
+offset_right = 81.0
+offset_bottom = 54.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+text = "Try Again?"
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="RestartButton" type="Button" parent="PanelContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
 text = "Restart"
