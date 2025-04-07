@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cbb4ib7lqcrfb"]
+[gd_scene load_steps=18 format=3 uid="uid://cbb4ib7lqcrfb"]
 
 [ext_resource type="Script" uid="uid://dpe4mrdpy3rvy" path="res://source/player/player.gd" id="1_rbb8n"]
 [ext_resource type="Script" uid="uid://pnerh0kmcscw" path="res://source/player/health.gd" id="2_wydru"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://hij21r3dgm52" path="res://assets/textures/mouse-animation/frame0004.png" id="9_2s7gd"]
 [ext_resource type="Texture2D" uid="uid://2vaaxf0kxhn7" path="res://assets/textures/mouse-animation/frame0005.png" id="10_u7ucc"]
 [ext_resource type="Texture2D" uid="uid://b0fd7lif2p2f7" path="res://assets/textures/mouse-animation/frame0006.png" id="11_4fxtn"]
+[ext_resource type="Texture2D" uid="uid://c58qfw0cqjm70" path="res://assets/textures/CircleGradient.png" id="11_qx5pu"]
 [ext_resource type="Texture2D" uid="uid://4jwxqync7vrv" path="res://assets/textures/mouse-animation/frame0007.png" id="12_mhv2e"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6gbyg"]
@@ -136,3 +137,10 @@ libraries = {
 [node name="AudioListener2D" type="AudioListener2D" parent="."]
 position = Vector2(0, -17)
 current = true
+
+[node name="Shadow" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.207843)
+z_index = -1
+position = Vector2(-2, 30)
+scale = Vector2(0.234375, 0.0889483)
+texture = ExtResource("11_qx5pu")
