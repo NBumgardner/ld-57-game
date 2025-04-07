@@ -1,13 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://cbb4ib7lqcrfb"]
+[gd_scene load_steps=6 format=3 uid="uid://cbb4ib7lqcrfb"]
 
 [ext_resource type="Script" uid="uid://dpe4mrdpy3rvy" path="res://source/player/player.gd" id="1_rbb8n"]
 [ext_resource type="Texture2D" uid="uid://cdjfdyqj2pysg" path="res://assets/placeholder/godot_mouse.png" id="2_rbb8n"]
+[ext_resource type="Texture2D" uid="uid://fb6rkt0s8dnx" path="res://assets/placeholder/mouse_test.png" id="3_1jkmm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rbb8n"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_rbb8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1jkmm")
 }],
 "loop": true,
 "name": &"default",
@@ -15,8 +19,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1jkmm"]
-radius = 9.0
-height = 86.0
+radius = 5.0
+height = 50.0
 
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
@@ -24,13 +28,15 @@ collision_layer = 2
 script = ExtResource("1_rbb8n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.680285, 0.680285)
+position = Vector2(0, -10)
+scale = Vector2(0.09, 0.09)
 sprite_frames = SubResource("SpriteFrames_rbb8n")
-frame_progress = 0.367806
+frame = 1
 offset = Vector2(0, -62)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -8)
+z_index = 2
+position = Vector2(-7, -3)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_1jkmm")
 
