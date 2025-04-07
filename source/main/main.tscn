@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://qrl3ks7c3cmx"]
 
 [ext_resource type="Script" uid="uid://bf7wl22p8nx5d" path="res://source/main/main.gd" id="1_nevys"]
-[ext_resource type="PackedScene" path="res://source/main/game_world.tscn" id="2_2a4ee"]
+[ext_resource type="PackedScene" uid="uid://cewy6y7gv5w8l" path="res://source/main/game_world.tscn" id="2_2a4ee"]
 [ext_resource type="PackedScene" uid="uid://b850ghjahait8" path="res://source/ui/hud/Hud.tscn" id="5_2a4ee"]
-[ext_resource type="PackedScene" path="res://source/ui/pause_menu.tscn" id="6_420hx"]
+[ext_resource type="PackedScene" uid="uid://fu2qbtcnrita" path="res://source/ui/pause_menu.tscn" id="6_420hx"]
 
 [node name="Main" type="Node"]
 process_mode = 3
