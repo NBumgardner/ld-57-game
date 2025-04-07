@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dnej1lg77q1me"]
+[gd_scene load_steps=4 format=3 uid="uid://dnej1lg77q1me"]
 
 [ext_resource type="Script" uid="uid://mykw187r5dmq" path="res://source/ui/title_screen.gd" id="1_17f1p"]
 [ext_resource type="Theme" uid="uid://cc6lnqbwuk0j3" path="res://assets/themes/font_title.tres" id="2_nwhvs"]
+[ext_resource type="Script" uid="uid://ddrvwo283bryh" path="res://source/ui/custom_elements/sonud_button.gd" id="3_t05mx"]
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -65,8 +66,12 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 text = "Start Game"
+script = ExtResource("3_t05mx")
+metadata/_custom_type_script = "uid://ddrvwo283bryh"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Quit"
+script = ExtResource("3_t05mx")
+metadata/_custom_type_script = "uid://ddrvwo283bryh"

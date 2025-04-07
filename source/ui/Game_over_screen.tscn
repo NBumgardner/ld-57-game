@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b6n4i8bdfotkl"]
+[gd_scene load_steps=4 format=3 uid="uid://b6n4i8bdfotkl"]
 
 [ext_resource type="Script" uid="uid://8b25hx3yxr8e" path="res://source/ui/game_over_screen.gd" id="1_kcqwk"]
 [ext_resource type="Texture2D" uid="uid://qe5phbmgdxt3" path="res://assets/placeholder/chef_cat.png" id="2_3rnon"]
+[ext_resource type="Script" uid="uid://ddrvwo283bryh" path="res://source/ui/custom_elements/sonud_button.gd" id="3_3oesf"]
 
 [node name="GameOverScreen" type="Control"]
 layout_mode = 3
@@ -78,3 +79,5 @@ layout_mode = 2
 unique_name_in_owner = true
 layout_mode = 2
 text = "Restart"
+script = ExtResource("3_3oesf")
+metadata/_custom_type_script = "uid://ddrvwo283bryh"

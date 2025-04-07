@@ -25,7 +25,7 @@ buses/default_bus_layout="uid://cf1kouuuqdfjn"
 
 Database="*res://source/globals/data/database.gd"
 Events="*res://source/globals/event_bus.gd"
-AudioManager="*res://source/globals/AudioManager.tscn"
+AudioManager="*res://assets/AudioManager.tscn"
 
 [debug]
 
@@ -34,6 +34,10 @@ gdscript/warnings/unused_signal=0
 [display]
 
 window/stretch/mode="canvas_items"
+
+[editor]
+
+script/search_in_file_extensions=PackedStringArray("gd", "gdshader", "tscn")
 
 [file_customization]
 
