@@ -16,6 +16,7 @@ var spawn_point : Vector2 = Vector2.ZERO
 
 
 func _ready() -> void:
+	self.hide()
 	Events.level_transition_started.connect(_on_level_transition_started)
 	Events.level_transition_completed.connect(_on_level_transition_ended)
 

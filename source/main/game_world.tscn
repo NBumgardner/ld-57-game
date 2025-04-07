@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cewy6y7gv5w8l"]
+[gd_scene load_steps=6 format=3 uid="uid://cewy6y7gv5w8l"]
 
 [ext_resource type="Script" uid="uid://dw41eu1fiju47" path="res://source/main/game_world.gd" id="1_6m16l"]
 [ext_resource type="PackedScene" uid="uid://cbb4ib7lqcrfb" path="res://source/player/Player.tscn" id="2_6m16l"]
-[ext_resource type="PackedScene" uid="uid://ri8nlljydju3" path="res://source/levels/collection_junkyard_maze/junkyard_1.tscn" id="2_t6wge"]
 
 [sub_resource type="Gradient" id="Gradient_6m16l"]
 offsets = PackedFloat32Array(0, 0.465753, 0.972603)
@@ -19,11 +18,9 @@ fill_to = Vector2(0, 0)
 z_as_relative = false
 y_sort_enabled = true
 script = ExtResource("1_6m16l")
-current_level = NodePath("Level")
+current_level = NodePath("")
 game_camera = NodePath("GameCamera")
 player = NodePath("Player")
-
-[node name="Level" parent="." instance=ExtResource("2_t6wge")]
 
 [node name="Background" type="Node2D" parent="."]
 metadata/_edit_lock_ = true

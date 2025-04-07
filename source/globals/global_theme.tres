@@ -1,5 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://covbdjp1qewnk"]
 
 [resource]
+Button/font_sizes/font_size = 32
 Label/colors/font_color = Color(0.82, 0.816173, 0.7872, 1)
 Label/font_sizes/font_size = 32
