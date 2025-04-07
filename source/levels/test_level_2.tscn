@@ -5,16 +5,10 @@
 
 [node name="TemplateTest" instance=ExtResource("1_nlhwm")]
 
-[node name="PlayerSpawnPoint" parent="Objects" index="0"]
-position = Vector2(-81.25, 85)
-scale = Vector2(1.25, 1.25)
-
-[node name="SpotLight" parent="Objects/PlayerSpawnPoint" index="0"]
-modulate = Color(0, 0, 0, 0.207843)
-
-[node name="CatTrap" parent="Objects" index="1" instance=ExtResource("6_mpttg")]
-position = Vector2(-312.5, 252.5)
-
-[node name="Ladder" parent="Objects" index="2"]
+[node name="Ladder" parent="Objects" index="1"]
 position = Vector2(392.5, 287.5)
-next_level_filepath = "uid://cmhs4ktd6ptg5"
+next_level_filepath = "uid://ri8nlljydju3"
+
+[node name="CatTrap" parent="Objects" index="2" instance=ExtResource("6_mpttg")]
+position = Vector2(-312.5, 252.5)
+scale = Vector2(1, 1)

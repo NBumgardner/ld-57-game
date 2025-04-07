@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://ri8nlljydju3"]
+
+[ext_resource type="PackedScene" uid="uid://6ujytfaku6kd" path="res://source/levels/level_template.tscn" id="1_iyt41"]
+[ext_resource type="PackedScene" uid="uid://bi4xnp24pulp0" path="res://source/objects/cat/cat_trap.tscn" id="2_k4h0x"]
+[ext_resource type="PackedScene" uid="uid://dpe634571k2ll" path="res://source/objects/cheese/cheese.tscn" id="3_e3mx7"]
+[ext_resource type="PackedScene" uid="uid://d4k3wt7qv7x2r" path="res://source/objects/walls/wall_002.tscn" id="4_bkr5s"]
+
+[node name="LevelTemplate" instance=ExtResource("1_iyt41")]
+
+[node name="PlayerSpawnPoint" parent="Objects" index="0"]
+position = Vector2(-370, -87.5)
+
+[node name="Ladder" parent="Objects" index="1"]
+position = Vector2(341.25, -117.5)
+next_level_filepath = "uid://b0btl83id1dtk"
+
+[node name="CatTrap" parent="Objects" index="2" instance=ExtResource("2_k4h0x")]
+position = Vector2(103, -133)
+
+[node name="Cheese" parent="Objects" index="3" instance=ExtResource("3_e3mx7")]
+position = Vector2(-507, 217)
+
+[node name="Cheese2" parent="Objects" index="4" instance=ExtResource("3_e3mx7")]
+position = Vector2(-102, -137)
+
+[node name="Wall002" parent="Objects" index="5" instance=ExtResource("4_bkr5s")]
+position = Vector2(-514, 23)
+
+[node name="Wall004" parent="Objects" index="6" instance=ExtResource("4_bkr5s")]
+position = Vector2(-248, -108)
+
+[node name="Wall005" parent="Objects" index="7" instance=ExtResource("4_bkr5s")]
+position = Vector2(-196, 78)
+
+[node name="Wall007" parent="Objects" index="8" instance=ExtResource("4_bkr5s")]
+position = Vector2(-59, 114)
+
+[node name="Wall008" parent="Objects" index="9" instance=ExtResource("4_bkr5s")]
+position = Vector2(87, 108)
+
+[node name="Wall009" parent="Objects" index="10" instance=ExtResource("4_bkr5s")]
+position = Vector2(229, 108)
+
+[node name="Wall003" parent="Objects" index="11" instance=ExtResource("4_bkr5s")]
+position = Vector2(-440, 77)
+scale = Vector2(0.5, 0.5)
+
+[node name="Wall006" parent="Objects" index="12" instance=ExtResource("4_bkr5s")]
+position = Vector2(-272, 167)
+scale = Vector2(0.5, 0.5)

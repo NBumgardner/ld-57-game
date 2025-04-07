@@ -1,10 +1,6 @@
 class_name GameWorld
 extends Node2D
 
-# res://source/levels/base_level/game_levels.tres
-#const levels : Array = preload("uid://blujwsb8ysnqj").levels
-#var current_level_id : int = 0
-
 @export var current_level : Level
 @export var game_camera: Camera2D
 @export var player: Player
@@ -19,6 +15,8 @@ func _ready() -> void:
 	
 	if current_level:
 		current_level.start_level()
+	else:
+		find_level()
 
 
 func _process(_delta: float) -> void:
@@ -66,11 +64,15 @@ func transition_to_next_level() -> void:
 	Database.floor_count += 1
 
 
-#func _on_transition_completed() -> void:
-	#reset_load_status()
-
-
 func reset_load_status() -> void:
 	load_path = ""
 	load_status = ResourceLoader.THREAD_LOAD_LOADED
 #endregion Loading
+
+
+func find_level() -> void:
+	for node in get_children():
+		if node is Level:
+			current_level = node
+			current_level.start_level()
+			break
