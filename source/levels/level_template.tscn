@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dx3hj00udpdbk" path="res://source/objects/ladder/Ladder.tscn" id="4_5uc0g"]
 [ext_resource type="Texture2D" uid="uid://c58qfw0cqjm70" path="res://assets/textures/CircleGradient.png" id="4_6rnss"]
 
-[node name="LevelTemplate" type="Node2D" node_paths=PackedStringArray("player_spawn_point", "animation", "objects")]
+[node name="Level" type="Node2D" node_paths=PackedStringArray("player_spawn_point", "animation", "objects")]
 z_as_relative = false
 y_sort_enabled = true
 script = ExtResource("1_mtyep")

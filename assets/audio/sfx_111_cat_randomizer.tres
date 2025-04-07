@@ -1,12 +1,12 @@
 [gd_resource type="AudioStreamRandomizer" load_steps=8 format=3 uid="uid://dwylgook78c4m"]
 
-[ext_resource type="AudioStream" uid="uid://c5kuaqflk61gu" path="res://assets/audio/sfx_101_cat_meow.wav" id="1_2qs1u"]
-[ext_resource type="AudioStream" uid="uid://blamb1ridsakw" path="res://assets/audio/sfx_102_cat_meow.wav" id="2_nv7se"]
-[ext_resource type="AudioStream" uid="uid://bi2d2rrbfh3c5" path="res://assets/audio/sfx_103_cat_meow.wav" id="3_lpkp5"]
-[ext_resource type="AudioStream" uid="uid://bks48ryvr4xmv" path="res://assets/audio/sfx_104_cat_meow.wav" id="4_h1ile"]
-[ext_resource type="AudioStream" uid="uid://b6hnciaib2t0s" path="res://assets/audio/sfx_105_cat_meow.wav" id="5_2cebl"]
-[ext_resource type="AudioStream" uid="uid://bjpvqp8swja52" path="res://assets/audio/sfx_106_cat_meow.wav" id="6_al717"]
-[ext_resource type="AudioStream" uid="uid://pek6qfrdwmfr" path="res://assets/audio/sfx_107_cat_hiss.wav" id="7_2rv7k"]
+[ext_resource type="AudioStream" uid="uid://c5kuaqflk61gu" path="res://assets/audio/sfx/sfx_101_cat_meow.wav" id="1_2qs1u"]
+[ext_resource type="AudioStream" uid="uid://blamb1ridsakw" path="res://assets/audio/sfx/sfx_102_cat_meow.wav" id="2_nv7se"]
+[ext_resource type="AudioStream" uid="uid://bi2d2rrbfh3c5" path="res://assets/audio/sfx/sfx_103_cat_meow.wav" id="3_lpkp5"]
+[ext_resource type="AudioStream" uid="uid://bks48ryvr4xmv" path="res://assets/audio/sfx/sfx_104_cat_meow.wav" id="4_h1ile"]
+[ext_resource type="AudioStream" uid="uid://b6hnciaib2t0s" path="res://assets/audio/sfx/sfx_105_cat_meow.wav" id="5_2cebl"]
+[ext_resource type="AudioStream" uid="uid://bjpvqp8swja52" path="res://assets/audio/sfx/sfx_106_cat_meow.wav" id="6_al717"]
+[ext_resource type="AudioStream" uid="uid://pek6qfrdwmfr" path="res://assets/audio/sfx/sfx_107_cat_hiss.wav" id="7_2rv7k"]
 
 [resource]
 random_pitch = 1.05

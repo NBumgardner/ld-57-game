@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b6hnciaib2t0s"
-path="res://.godot/imported/sfx_105_cat_meow.wav-85df8e9aeaa2aa588c9b7336e2c34a2f.sample"
+path="res://.godot/imported/sfx_105_cat_meow.wav-3b72d4b33d3264823f85d6aa8bfa4ff3.sample"
 
 [deps]
 
-source_file="res://assets/audio/sfx_105_cat_meow.wav"
-dest_files=["res://.godot/imported/sfx_105_cat_meow.wav-85df8e9aeaa2aa588c9b7336e2c34a2f.sample"]
+source_file="res://assets/audio/sfx/sfx_105_cat_meow.wav"
+dest_files=["res://.godot/imported/sfx_105_cat_meow.wav-3b72d4b33d3264823f85d6aa8bfa4ff3.sample"]
 
 [params]
 

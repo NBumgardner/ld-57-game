@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d4jbar8lk55y2"
-path="res://.godot/imported/sfx_203_ladder_soft_air.wav-2abe05adc355b78841ccd062e3e096b9.sample"
+path="res://.godot/imported/sfx_203_ladder_soft_air.wav-1a4b22322246b9028b2ad674060087b3.sample"
 
 [deps]
 
-source_file="res://assets/audio/sfx_203_ladder_soft_air.wav"
-dest_files=["res://.godot/imported/sfx_203_ladder_soft_air.wav-2abe05adc355b78841ccd062e3e096b9.sample"]
+source_file="res://assets/audio/sfx/sfx_203_ladder_soft_air.wav"
+dest_files=["res://.godot/imported/sfx_203_ladder_soft_air.wav-1a4b22322246b9028b2ad674060087b3.sample"]
 
 [params]
 

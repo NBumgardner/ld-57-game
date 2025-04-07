@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://pek6qfrdwmfr"
-path="res://.godot/imported/sfx_107_cat_hiss.wav-aedd03f1a8458ced19afbde30512a23a.sample"
+path="res://.godot/imported/sfx_107_cat_hiss.wav-63c7e3ce1fcf1cb1a5d57201c9215145.sample"
 
 [deps]
 
-source_file="res://assets/audio/sfx_107_cat_hiss.wav"
-dest_files=["res://.godot/imported/sfx_107_cat_hiss.wav-aedd03f1a8458ced19afbde30512a23a.sample"]
+source_file="res://assets/audio/sfx/sfx_107_cat_hiss.wav"
+dest_files=["res://.godot/imported/sfx_107_cat_hiss.wav-63c7e3ce1fcf1cb1a5d57201c9215145.sample"]
 
 [params]
 

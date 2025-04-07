@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b4xxfejat6bop"
-path="res://.godot/imported/sfx_201_mouse_trap_snap.wav-8df24805be41e6304afd99122fcd0dac.sample"
+path="res://.godot/imported/sfx_201_mouse_trap_snap.wav-567b7603c47e6ad66890e151dec7da5e.sample"
 
 [deps]
 
-source_file="res://assets/audio/sfx_201_mouse_trap_snap.wav"
-dest_files=["res://.godot/imported/sfx_201_mouse_trap_snap.wav-8df24805be41e6304afd99122fcd0dac.sample"]
+source_file="res://assets/audio/sfx/sfx_201_mouse_trap_snap.wav"
+dest_files=["res://.godot/imported/sfx_201_mouse_trap_snap.wav-567b7603c47e6ad66890e151dec7da5e.sample"]
 
 [params]
 

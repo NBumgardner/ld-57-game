@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://phxmsyi1vrbc"
-path="res://.godot/imported/sfx_207_nibble.wav-d57dece775391814210a41a9be325730.sample"
+path="res://.godot/imported/sfx_207_nibble.wav-0289a72bccc91381a71b7c559cb0de3e.sample"
 
 [deps]
 
-source_file="res://assets/audio/sfx_207_nibble.wav"
-dest_files=["res://.godot/imported/sfx_207_nibble.wav-d57dece775391814210a41a9be325730.sample"]
+source_file="res://assets/audio/sfx/sfx_207_nibble.wav"
+dest_files=["res://.godot/imported/sfx_207_nibble.wav-0289a72bccc91381a71b7c559cb0de3e.sample"]
 
 [params]
 
