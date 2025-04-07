@@ -7,6 +7,13 @@ extends Area2D
 
 @export var damage : float = 2
 @export var trap_ready : bool = true
+@export var damage_ready : bool = false:
+	set(new_value):
+		damage_ready = new_value
+		if damage_ready:
+			for area in get_overlapping_areas():
+				deal_damage(area)
+
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered_area)
@@ -18,5 +25,12 @@ func _on_body_entered_area(_body: Node2D) -> void:
 		animation.play("drop_hand")
 
 
-func _on_hand_drop_finished() -> void:
-	pass
+func _on_area_entered(area: Area2D) -> void:
+	if damage_ready:
+		deal_damage(area)
+
+
+func deal_damage(damaged_node: Node2D) -> void:
+	if damage_ready:
+		if damaged_node.has_method("take_damage"):
+			damaged_node.take_damage(damage)

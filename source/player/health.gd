@@ -1,10 +1,8 @@
 class_name HealthComponent
-extends Node2D
+extends Area2D
 
 signal death
 signal health_changed
-
-@export var hitbox : Area2D
 
 @export var max_health : float = 10:
 	set(new_max_health):

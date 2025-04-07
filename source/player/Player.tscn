@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cbb4ib7lqcrfb"]
+[gd_scene load_steps=14 format=3 uid="uid://cbb4ib7lqcrfb"]
 
 [ext_resource type="Script" uid="uid://dpe4mrdpy3rvy" path="res://source/player/player.gd" id="1_rbb8n"]
 [ext_resource type="Script" uid="uid://pnerh0kmcscw" path="res://source/player/health.gd" id="2_wydru"]
@@ -10,6 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://2vaaxf0kxhn7" path="res://assets/textures/mouse-animation/frame0005.png" id="10_u7ucc"]
 [ext_resource type="Texture2D" uid="uid://b0fd7lif2p2f7" path="res://assets/textures/mouse-animation/frame0006.png" id="11_4fxtn"]
 [ext_resource type="Texture2D" uid="uid://4jwxqync7vrv" path="res://assets/textures/mouse-animation/frame0007.png" id="12_mhv2e"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6gbyg"]
+radius = 12.0
+height = 56.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rbb8n"]
 animations = [{
@@ -60,9 +64,17 @@ y_sort_enabled = true
 collision_layer = 2
 script = ExtResource("1_rbb8n")
 
-[node name="Health" type="Node2D" parent="."]
+[node name="Health" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+monitoring = false
 script = ExtResource("2_wydru")
 metadata/_custom_type_script = "uid://pnerh0kmcscw"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Health"]
+position = Vector2(-1, 4)
+shape = SubResource("CapsuleShape2D_6gbyg")
+debug_color = Color(0.8, 0.428267, 0.144, 0.223529)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.05, 0.05)

@@ -4,6 +4,9 @@ extends Node
 signal game_paused
 signal game_unpaused
 
+signal game_started
+signal game_ended
+
 signal level_load_started(level_path : String)
 signal level_load_completed
 signal level_transition_started

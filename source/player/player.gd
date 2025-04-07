@@ -19,6 +19,8 @@ func _ready() -> void:
 	self.hide()
 	Events.level_transition_started.connect(_on_level_transition_started)
 	Events.level_transition_completed.connect(_on_level_transition_ended)
+	health.death.connect(_on_death)
+	health.health_changed.connect(_on_health_changed)
 
 
 func _physics_process(_delta: float) -> void:
@@ -75,3 +77,18 @@ func enter_state(new_state : STATE) -> void:
 		
 		_:
 			printerr("Attempting to enter invalid state")
+
+
+#region Health
+func _on_health_changed(new_health, new_max_health) -> void:
+	Database.health_changed.emit(new_health, new_max_health)
+
+
+func take_damage(amount : float = 0) -> void:
+	health.take_damage(amount)
+
+
+func _on_death() -> void:
+	self.hide()
+	Events.game_ended.emit()
+#endregion Health

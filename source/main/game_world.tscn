@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://cbb4ib7lqcrfb" path="res://source/player/Player.tscn" id="2_6m16l"]
 
 [sub_resource type="Gradient" id="Gradient_6m16l"]
-offsets = PackedFloat32Array(0, 0.465753, 0.972603)
-colors = PackedColorArray(0, 0, 0, 1, 0.123529, 0.0745098, 0.0960784, 1, 0.235294, 0.141176, 0.184314, 1)
+offsets = PackedFloat32Array(0, 0.47619, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.123529, 0.0745098, 0.0960784, 1, 0.28, 0.1428, 0.161093, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_6m16l"]
 gradient = SubResource("Gradient_6m16l")
@@ -14,11 +14,10 @@ fill_to = Vector2(0, 0)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_n3iyj"]
 
-[node name="GameWorld" type="Node2D" node_paths=PackedStringArray("current_level", "game_camera", "player")]
+[node name="GameWorld" type="Node2D" node_paths=PackedStringArray("game_camera", "player")]
 z_as_relative = false
 y_sort_enabled = true
 script = ExtResource("1_6m16l")
-current_level = NodePath("")
 game_camera = NodePath("GameCamera")
 player = NodePath("Player")
 

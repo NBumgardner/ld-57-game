@@ -16,6 +16,7 @@ func _ready():
 	_set_health_text(Database.player_health_current)
 	Events.level_transition_started.connect(_on_transition_started)
 	Events.level_transition_completed.connect(_on_transition_ended)
+	Events.game_ended.connect(_on_game_ended)
 
 
 func _set_health_text(new_health: int, _old_health: int = 0) -> void:
@@ -38,3 +39,9 @@ func _on_transition_started() -> void:
 func _on_transition_ended() -> void:
 	var tween = create_tween()
 	tween.tween_property(self,"modulate:a",1.0,0.3)
+
+
+func _on_game_ended() -> void:
+	var tween = create_tween()
+	tween.tween_property(self,"modulate:a",0.0,0.2)
+	
