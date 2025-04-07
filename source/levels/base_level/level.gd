@@ -9,6 +9,7 @@ extends Node2D
 func _ready() -> void:
 	hide()
 	y_sort_enabled = true
+	Events.game_ended.connect(end_level)
 	
 	if player_spawn_point:
 		player_spawn_point.add_to_group("player_spawn_point")

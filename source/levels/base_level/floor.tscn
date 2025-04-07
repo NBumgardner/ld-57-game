@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c66qcxf03vsl3"]
 
-[ext_resource type="Texture2D" uid="uid://bnqw2jdhtxxli" path="res://assets/textures/BoxGradient.png" id="1_1b058"]
+[ext_resource type="Texture2D" uid="uid://des6iaxgnaohi" path="res://assets/textures/tiles/tilewood1.png" id="1_y80ay"]
 
 [sub_resource type="Gradient" id="Gradient_pqajb"]
 
@@ -11,16 +11,15 @@ fill_to = Vector2(0, 0)
 
 [node name="Floor" type="Polygon2D"]
 z_index = -200
-color = Color(0.533045, 0.275844, 0.252221, 1)
-texture = ExtResource("1_1b058")
+texture = ExtResource("1_y80ay")
 polygon = PackedVector2Array(-475, -190, 475, -190, 580, 279, -580, 279)
-uv = PackedVector2Array(16, 16, 112, 16, 104, 96, 24, 96)
+uv = PackedVector2Array(499.756, -0.244186, 500.244, 499.756, 0.244385, 500.244, -0.244186, 0.24437)
 metadata/_edit_lock_ = true
 
 [node name="FloorSide" type="Polygon2D" parent="."]
 z_index = -50
 position = Vector2(0, 459)
-color = Color(0.461127, 0.232959, 0.212214, 1)
+color = Color(0.2, 0.0862745, 0, 1)
 texture = SubResource("GradientTexture2D_2a4ee")
 polygon = PackedVector2Array(-580, -180, 580, -180, 540, -120, -540, -120)
 uv = PackedVector2Array(-3.57628e-06, 0, 64, 0, 64, 64, -1.90735e-06, 64)

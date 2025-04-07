@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://qrl3ks7c3cmx"]
+[gd_scene load_steps=7 format=3 uid="uid://qrl3ks7c3cmx"]
 
 [ext_resource type="Script" uid="uid://bf7wl22p8nx5d" path="res://source/main/main.gd" id="1_nevys"]
 [ext_resource type="PackedScene" uid="uid://cewy6y7gv5w8l" path="res://source/main/game_world.tscn" id="2_2a4ee"]
 [ext_resource type="PackedScene" uid="uid://dnej1lg77q1me" path="res://source/ui/title_screen.tscn" id="3_2a4ee"]
 [ext_resource type="PackedScene" uid="uid://b850ghjahait8" path="res://source/ui/hud/Hud.tscn" id="5_2a4ee"]
-[ext_resource type="PackedScene" path="res://source/ui/pause_menu.tscn" id="6_420hx"]
+[ext_resource type="PackedScene" uid="uid://fu2qbtcnrita" path="res://source/ui/pause_menu.tscn" id="6_420hx"]
+[ext_resource type="PackedScene" uid="uid://dkr68fc527mn8" path="res://source/ui/Game_over_screen.tscn" id="6_qkuhj"]
 
 [node name="Main" type="Node"]
 process_mode = 3
@@ -21,3 +22,5 @@ metadata/_edit_lock_ = true
 [node name="Hud" parent="UI" instance=ExtResource("5_2a4ee")]
 
 [node name="PauseMenu" parent="UI" instance=ExtResource("6_420hx")]
+
+[node name="GameOverScreen" parent="UI" instance=ExtResource("6_qkuhj")]

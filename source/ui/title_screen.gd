@@ -10,7 +10,7 @@ extends Control
 func _ready() -> void:
 	start_button.pressed.connect(_on_start_button_pressed)
 	quit_button.pressed.connect(_on_quit_button_pressed)
-
+	
 	if OS.get_name() == "Web":
 		quit_button.visible = false
 
