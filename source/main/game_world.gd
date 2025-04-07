@@ -1,31 +1,76 @@
 class_name GameWorld
 extends Node2D
 
-const levels : Array = preload("res://source/levels/game_levels.tres").levels
+# res://source/levels/base_level/game_levels.tres
+#const levels : Array = preload("uid://blujwsb8ysnqj").levels
+#var current_level_id : int = 0
 
 @export var current_level : Level
-var current_level_id : int = 0
 @export var game_camera: Camera2D
 @export var player: Player
 
+#region Load variables
+var load_path : String = ""
+var load_status : ResourceLoader.ThreadLoadStatus = ResourceLoader.THREAD_LOAD_LOADED
+#endregion Load variables
 
 func _ready() -> void:
-	Events.transitioning_to_new_level.connect(load_next_level)
-	current_level.start_level()
+	Events.level_load_started.connect(load_level)
+	
+	if current_level:
+		current_level.start_level()
 
 
-func load_next_level() -> void:
-	await get_tree().create_timer(0.2).timeout
-	current_level_id = wrap(current_level_id + 1, 0, levels.size())
-	Database.floor_count += 1
-	var next_level : PackedScene = levels[current_level_id]
+func _process(_delta: float) -> void:
+	if load_status == ResourceLoader.THREAD_LOAD_IN_PROGRESS:
+		update_load_status()
+
+
+#region Loading
+func load_level(level_path : String = "uid://dju73xpfvuytb") -> void:
+	if level_path == "":
+		printerr("Provided file path is blank")
+		reset_load_status()
+		return
+	
+	if level_path.is_absolute_path() or level_path.is_relative_path():
+		load_path = level_path
+		ResourceLoader.load_threaded_request(load_path)
+		load_status = ResourceLoader.load_threaded_get_status(load_path)
+	
+	else: printerr("Invalid file path for new level")
+
+
+func update_load_status() -> void:
+	load_status = ResourceLoader.load_threaded_get_status(load_path)
+	if load_status == ResourceLoader.THREAD_LOAD_LOADED:
+		transition_to_next_level()
+	elif load_status == ResourceLoader.THREAD_LOAD_FAILED:
+		printerr("Resource loading failed. Check that this file path is correct: \"", load_path,"\"")
+		reset_load_status()
+
+
+func transition_to_next_level() -> void:
+	var next_level := ResourceLoader.load_threaded_get(load_path)
+	reset_load_status()
+	
 	var old_level : Level = current_level
 	var new_level : Level = next_level.instantiate()
-	player.set_deferred("process_mode", PROCESS_MODE_DISABLED)
+	await get_tree().process_frame
 	call_deferred("add_child",new_level)
 	current_level = new_level
 	
-	if old_level: old_level.queue_free()
 	new_level.call_deferred("start_level")
-	player.global_position = new_level.player_spawn_point.global_position
-	player.set_deferred("process_mode", PROCESS_MODE_INHERIT)
+	if old_level: old_level.call_deferred("end_level")
+	
+	Database.floor_count += 1
+
+
+#func _on_transition_completed() -> void:
+	#reset_load_status()
+
+
+func reset_load_status() -> void:
+	load_path = ""
+	load_status = ResourceLoader.THREAD_LOAD_LOADED
+#endregion Loading

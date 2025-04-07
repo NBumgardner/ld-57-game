@@ -1,5 +1,9 @@
 extends Area2D
 
+## Insert a UID to the next level. 
+## You can get this by right-clicking on the tscn in the FileSystem.
+@export var next_level_filepath : String = ""
+
 
 func _ready() -> void:
 	set_deferred("monitoring", true)
@@ -9,4 +13,8 @@ func _ready() -> void:
 func _on_body_entered_area(body: Node2D) -> void:
 	if body is Player:
 		set_deferred("monitoring", false)
-		Events.transitioning_to_new_level.emit()
+		
+		if next_level_filepath:
+			Events.level_load_started.emit(next_level_filepath)
+		else:
+			Events.level_load_started.emit()

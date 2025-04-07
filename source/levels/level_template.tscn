@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://6ujytfaku6kd"]
+
+[ext_resource type="Script" uid="uid://cs7fkoyeupiik" path="res://source/levels/base_level/level.gd" id="1_mtyep"]
+[ext_resource type="PackedScene" uid="uid://c66qcxf03vsl3" path="res://source/levels/base_level/floor.tscn" id="2_xb8va"]
+[ext_resource type="AnimationLibrary" uid="uid://dxwscawib4dcf" path="res://source/levels/base_level/level_animations.res" id="3_yskno"]
+[ext_resource type="PackedScene" uid="uid://dx3hj00udpdbk" path="res://source/objects/ladder/Ladder.tscn" id="4_5uc0g"]
+[ext_resource type="Texture2D" uid="uid://c58qfw0cqjm70" path="res://assets/textures/CircleGradient.png" id="4_6rnss"]
+
+[node name="LevelTemplate" type="Node2D" node_paths=PackedStringArray("player_spawn_point", "animation", "objects")]
+modulate = Color(0, 0, 0, 1)
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(0, 450)
+scale = Vector2(0.47, 0.47)
+script = ExtResource("1_mtyep")
+player_spawn_point = NodePath("Objects/PlayerSpawnPoint")
+animation = NodePath("AnimationPlayer")
+objects = NodePath("Objects")
+metadata/_custom_type_script = "uid://cs7fkoyeupiik"
+
+[node name="Floor" parent="." instance=ExtResource("2_xb8va")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+process_mode = 1
+libraries = {
+&"level_animations": ExtResource("3_yskno")
+}
+autoplay = "level_animations/RESET"
+speed_scale = 2.0
+
+[node name="Objects" type="Node2D" parent="."]
+process_mode = 4
+position = Vector2(-165, -68)
+scale = Vector2(0.8, 0.8)
+
+[node name="PlayerSpawnPoint" type="Marker2D" parent="Objects"]
+position = Vector2(-81.25, 85)
+scale = Vector2(1.25, 1.25)
+gizmo_extents = 15.0
+
+[node name="SpotLight" type="Sprite2D" parent="Objects/PlayerSpawnPoint"]
+modulate = Color(0, 0, 0, 0.207843)
+z_index = -1
+scale = Vector2(1, 0.474)
+texture = ExtResource("4_6rnss")
+
+[node name="Ladder" parent="Objects" instance=ExtResource("4_5uc0g")]
+position = Vector2(-294, -93)
