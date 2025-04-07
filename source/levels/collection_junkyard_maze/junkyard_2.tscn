@@ -63,4 +63,4 @@ position = Vector2(-150, 101)
 scale = Vector2(0.5, 0.5)
 
 [node name="SnapTrap" parent="Objects" index="15" instance=ExtResource("5_q2185")]
-position = Vector2(-433.75, 196.25)
+position = Vector2(-435, 197.5)

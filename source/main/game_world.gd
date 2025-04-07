@@ -1,6 +1,7 @@
 class_name GameWorld
 extends Node2D
 
+@onready var sfx_transition: AudioStreamPlayer = $"SFX|Transition"
 @export var game_camera: Camera2D
 @export var player: Player
 @export var starting_level : String = "uid://ri8nlljydju3"
@@ -68,17 +69,10 @@ func transition_to_next_level(next_level : PackedScene) -> void:
 	if old_level: old_level.call_deferred("end_level")
 	
 	Database.floor_count += 1
+	sfx_transition.play()
 
 
 func reset_load_status() -> void:
 	load_path = ""
 	load_status = ResourceLoader.THREAD_LOAD_LOADED
 #endregion Loading
-
-
-func find_level() -> void:
-	for node in get_children():
-		if node is Level:
-			current_level = node
-			current_level.start_level()
-			break

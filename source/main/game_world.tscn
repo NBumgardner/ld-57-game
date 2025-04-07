@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cewy6y7gv5w8l"]
+[gd_scene load_steps=8 format=3 uid="uid://cewy6y7gv5w8l"]
 
 [ext_resource type="Script" uid="uid://dw41eu1fiju47" path="res://source/main/game_world.gd" id="1_6m16l"]
 [ext_resource type="PackedScene" uid="uid://cbb4ib7lqcrfb" path="res://source/player/Player.tscn" id="2_6m16l"]
+[ext_resource type="AudioStream" uid="uid://d4jbar8lk55y2" path="res://assets/audio/sfx/sfx_203_ladder_soft_air.wav" id="3_6m16l"]
 
 [sub_resource type="Gradient" id="Gradient_6m16l"]
 offsets = PackedFloat32Array(0, 0.47619, 1)
@@ -13,6 +14,12 @@ fill_from = Vector2(0, 1)
 fill_to = Vector2(0, 0)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_n3iyj"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_6m16l"]
+random_pitch = 1.1
+random_volume_offset_db = 0.2
+streams_count = 1
+stream_0/stream = ExtResource("3_6m16l")
 
 [node name="GameWorld" type="Node2D" node_paths=PackedStringArray("game_camera", "player")]
 z_as_relative = false
@@ -81,3 +88,9 @@ metadata/_edit_lock_ = true
 [node name="Player" parent="." instance=ExtResource("2_6m16l")]
 z_as_relative = false
 position = Vector2(-254, 51)
+
+[node name="SFX|Transition" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_6m16l")
+volume_db = 1.0
+pitch_scale = 0.9
+bus = &"Sound Effects"

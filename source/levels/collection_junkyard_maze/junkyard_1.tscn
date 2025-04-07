@@ -51,7 +51,7 @@ position = Vector2(-272, 167)
 scale = Vector2(0.5, 0.5)
 
 [node name="SnapTrap" parent="Objects" index="13" instance=ExtResource("5_e3mx7")]
-position = Vector2(-475, -180)
+position = Vector2(-497.5, -186.25)
 scale = Vector2(-1, 1)
 
 [node name="Shadows" type="CanvasGroup" parent="." index="3"]

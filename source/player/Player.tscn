@@ -132,3 +132,7 @@ shape = SubResource("CapsuleShape2D_1jkmm")
 libraries = {
 &"": SubResource("AnimationLibrary_kqkdd")
 }
+
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+position = Vector2(0, -17)
+current = true
