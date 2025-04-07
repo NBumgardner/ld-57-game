@@ -1,9 +1,11 @@
 class_name GameWorld
 extends Node2D
 
-@export var current_level : Level
 @export var game_camera: Camera2D
 @export var player: Player
+@export var starting_level : String = "uid://ri8nlljydju3"
+var current_level : Level
+
 
 #region Load variables
 var load_path : String = ""
@@ -12,11 +14,11 @@ var load_status : ResourceLoader.ThreadLoadStatus = ResourceLoader.THREAD_LOAD_L
 
 func _ready() -> void:
 	Events.level_load_started.connect(load_level)
-	
-	if current_level:
-		current_level.start_level()
-	else:
-		find_level()
+	Events.game_started.connect(_on_game_started)
+
+
+func _on_game_started() -> void:
+	Events.level_load_started.emit(starting_level)
 
 
 func _process(_delta: float) -> void:

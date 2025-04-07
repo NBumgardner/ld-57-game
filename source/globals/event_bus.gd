@@ -6,6 +6,7 @@ signal game_unpaused
 
 signal game_started
 signal game_ended
+signal game_restarted
 
 signal level_load_started(level_path : String)
 signal level_load_completed

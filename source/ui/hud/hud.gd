@@ -19,7 +19,7 @@ func _ready():
 	Events.game_ended.connect(_on_game_ended)
 
 
-func _set_health_text(new_health: int, _old_health: int = 0) -> void:
+func _set_health_text(new_health: float, _old_health: float = 0) -> void:
 	player_health_amount_display.text = str(new_health)
 
 

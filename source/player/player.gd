@@ -19,6 +19,7 @@ func _ready() -> void:
 	self.hide()
 	Events.level_transition_started.connect(_on_level_transition_started)
 	Events.level_transition_completed.connect(_on_level_transition_ended)
+	Events.game_started.connect(_on_game_started)
 	health.death.connect(_on_death)
 	health.health_changed.connect(_on_health_changed)
 	health.damage_taken.connect(_on_damage_taken)
@@ -42,6 +43,12 @@ func _input(_event: InputEvent) -> void:
 			enter_state(STATE.WALKING)
 			if abs(input_direction.x) > 0.1:
 				sprite.flip_h = bool(input_direction.x < 0)
+
+
+func _on_game_started() -> void:
+	health.current_health = health.max_health
+	Database.player_health_maximum = health.max_health
+	Database.player_health_current = health.current_health
 
 
 func _on_level_transition_started() -> void:
