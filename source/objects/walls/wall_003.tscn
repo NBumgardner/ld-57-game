@@ -1,10 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://t841wjrlo7xk"]
 
-[ext_resource type="Texture2D" uid="uid://ulqc2lgitpa5" path="res://assets/placeholder/wall_b_2_matchbox.png" id="1_106r7"]
+[ext_resource type="Texture2D" uid="uid://c1pm4t85t58c8" path="res://assets/textures/Wall B.png" id="1_106r7"]
 
 [node name="Wall003" type="StaticBody2D"]
 
 [node name="WallBMatches" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_106r7")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
