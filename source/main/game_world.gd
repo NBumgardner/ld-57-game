@@ -33,13 +33,13 @@ func load_level(level_path : String = "uid://6ujytfaku6kd") -> void:
 	
 	if level_path.is_absolute_path() or level_path.is_relative_path():
 		load_path = level_path
-		if OS.has_feature("web"):
-			var level_scene := ResourceLoader.load(load_path)
-			transition_to_next_level(level_scene)
-			
-		else:
+		if OS.has_feature("thread"):
 			ResourceLoader.load_threaded_request(load_path,"",true)
 			load_status = ResourceLoader.load_threaded_get_status(load_path)
+			
+		else:
+			var level_scene := ResourceLoader.load(load_path)
+			transition_to_next_level(level_scene)
 	
 	else: printerr("Invalid file path for new level")
 
