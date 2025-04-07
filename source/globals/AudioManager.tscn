@@ -48,3 +48,4 @@ script = ExtResource("1_edqxi")
 [node name="GameMusic" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamInteractive_va7d0")
 autoplay = true
+bus = &"Music"
