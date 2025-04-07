@@ -3,6 +3,7 @@ extends Area2D
 
 signal death
 signal health_changed
+signal damage_taken
 
 @export var max_health : float = 10:
 	set(new_max_health):
@@ -18,3 +19,4 @@ var current_health : float = max_health:
 
 func take_damage(amount) -> void:
 	current_health -= amount
+	damage_taken.emit()

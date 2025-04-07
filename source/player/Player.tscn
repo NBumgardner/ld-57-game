@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cbb4ib7lqcrfb"]
+[gd_scene load_steps=17 format=3 uid="uid://cbb4ib7lqcrfb"]
 
 [ext_resource type="Script" uid="uid://dpe4mrdpy3rvy" path="res://source/player/player.gd" id="1_rbb8n"]
 [ext_resource type="Script" uid="uid://pnerh0kmcscw" path="res://source/player/health.gd" id="2_wydru"]
@@ -59,6 +59,43 @@ animations = [{
 radius = 3.0
 height = 26.0
 
+[sub_resource type="Animation" id="Animation_6gbyg"]
+resource_name = "take_damage"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(2, 1, 1, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_qx5pu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kqkdd"]
+_data = {
+&"RESET": SubResource("Animation_qx5pu"),
+&"take_damage": SubResource("Animation_6gbyg")
+}
+
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
 collision_layer = 2
@@ -91,3 +128,6 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_1jkmm")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_kqkdd")
+}

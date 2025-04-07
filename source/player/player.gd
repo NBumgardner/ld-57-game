@@ -21,6 +21,7 @@ func _ready() -> void:
 	Events.level_transition_completed.connect(_on_level_transition_ended)
 	health.death.connect(_on_death)
 	health.health_changed.connect(_on_health_changed)
+	health.damage_taken.connect(_on_damage_taken)
 
 
 func _physics_process(_delta: float) -> void:
@@ -84,8 +85,8 @@ func _on_health_changed(new_health, new_max_health) -> void:
 	Database.health_changed.emit(new_health, new_max_health)
 
 
-func take_damage(amount : float = 0) -> void:
-	health.take_damage(amount)
+func _on_damage_taken() -> void:
+	animation.play("take_damage")
 
 
 func _on_death() -> void:
