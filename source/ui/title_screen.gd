@@ -16,7 +16,7 @@ func _ready() -> void:
 
 
 func _on_start_button_pressed() -> void:
-	Events.level_load_started.emit(first_level)
+	Events.game_started.emit()
 	self.hide()
 
 
