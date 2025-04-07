@@ -12,6 +12,10 @@ func _ready() -> void:
 	
 	if player_spawn_point:
 		player_spawn_point.add_to_group("player_spawn_point")
+	
+	# Runs if 'Run Current Scene(F6)' is selected
+	if get_tree().current_scene == self:
+		add_debug_tools()
 
 
 func start_level() -> void:
@@ -38,3 +42,11 @@ func disable_objects() -> void:
 func _on_start_level_animation_ended() -> void:
 	Events.level_transition_completed.emit()
 	enable_objects()
+
+
+func add_debug_tools() -> void:
+	print("testing...")
+	var debug_packed_scene : PackedScene = load("uid://c1xjwh3bd8v1o")
+	var debug_scene : Node = debug_packed_scene.instantiate()
+	add_child(debug_scene)
+	start_level()
