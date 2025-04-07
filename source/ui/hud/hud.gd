@@ -20,7 +20,7 @@ func _ready():
 
 
 func _set_health_text(new_health: float, _old_health: float = 0) -> void:
-	player_health_amount_display.text = str(new_health)
+	player_health_amount_display.text = str(int(new_health))
 
 
 func _on_floor_changed(new_floor_count : int = 1) -> void:
