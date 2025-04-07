@@ -1,4 +1,4 @@
-[gd_resource type="AudioStreamInteractive" load_steps=4 format=3 uid="uid://d0hmtvvluxylw"]
+[gd_resource type="AudioStreamInteractive" load_steps=4 format=3 uid="uid://bxbxfl3mpjf4m"]
 
 [ext_resource type="AudioStream" uid="uid://sp6yc78raoda" path="res://assets/audio/001_loop_music.ogg" id="1_cd6rt"]
 

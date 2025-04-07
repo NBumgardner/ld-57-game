@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dpe634571k2ll" path="res://source/objects/cheese/cheese.tscn" id="3_e3mx7"]
 [ext_resource type="PackedScene" uid="uid://d4k3wt7qv7x2r" path="res://source/objects/walls/wall_002.tscn" id="4_bkr5s"]
 
-[node name="LevelTemplate" instance=ExtResource("1_iyt41")]
+[node name="LevelTemplate2" instance=ExtResource("1_iyt41")]
 
 [node name="PlayerSpawnPoint" parent="Objects" index="0"]
 position = Vector2(-370, -87.5)
