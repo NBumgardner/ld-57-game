@@ -38,4 +38,3 @@ func _on_transition_started() -> void:
 func _on_transition_ended() -> void:
 	var tween = create_tween()
 	tween.tween_property(self,"modulate:a",1.0,0.3)
-	print("sdfsdf")

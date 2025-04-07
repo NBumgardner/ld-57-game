@@ -33,8 +33,13 @@ func load_level(level_path : String = "uid://6ujytfaku6kd") -> void:
 	
 	if level_path.is_absolute_path() or level_path.is_relative_path():
 		load_path = level_path
-		ResourceLoader.load_threaded_request(load_path)
-		load_status = ResourceLoader.load_threaded_get_status(load_path)
+		if OS.has_feature("web"):
+			var level_scene := ResourceLoader.load(load_path)
+			transition_to_next_level(level_scene)
+			
+		else:
+			ResourceLoader.load_threaded_request(load_path,"",true)
+			load_status = ResourceLoader.load_threaded_get_status(load_path)
 	
 	else: printerr("Invalid file path for new level")
 
@@ -42,14 +47,13 @@ func load_level(level_path : String = "uid://6ujytfaku6kd") -> void:
 func update_load_status() -> void:
 	load_status = ResourceLoader.load_threaded_get_status(load_path)
 	if load_status == ResourceLoader.THREAD_LOAD_LOADED:
-		transition_to_next_level()
+		transition_to_next_level(ResourceLoader.load_threaded_get(load_path))
 	elif load_status == ResourceLoader.THREAD_LOAD_FAILED:
 		printerr("Resource loading failed. Check that this file path is correct: \"", load_path,"\"")
 		reset_load_status()
 
 
-func transition_to_next_level() -> void:
-	var next_level := ResourceLoader.load_threaded_get(load_path)
+func transition_to_next_level(next_level : PackedScene) -> void:
 	reset_load_status()
 	
 	var old_level : Level = current_level
