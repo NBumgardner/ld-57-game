@@ -1,18 +1,20 @@
-[gd_resource type="AudioStreamInteractive" load_steps=4 format=3 uid="uid://bxbxfl3mpjf4m"]
+[gd_resource type="AudioStreamInteractive" load_steps=4 format=3 uid="uid://dnw46y208472"]
 
-[ext_resource type="AudioStream" uid="uid://sp6yc78raoda" path="res://assets/audio/001_loop_music.ogg" id="1_cd6rt"]
+[ext_resource type="AudioStream" uid="uid://sp6yc78raoda" path="res://assets/audio/001_loop_music.ogg" id="1_gco52"]
 
-[sub_resource type="AudioStreamWAV" id="AudioStreamWAV_va7d0"]
+[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_edqxi"]
+mix_rate = 20.0
+buffer_length = 0.01
 
 [sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_kloir"]
 fade_time = 0.1
 stream_count = 1
-stream_0 = ExtResource("1_cd6rt")
+stream_0 = ExtResource("1_gco52")
 
 [resource]
 clip_count = 2
 clip_0/name = &"Silence"
-clip_0/stream = SubResource("AudioStreamWAV_va7d0")
+clip_0/stream = SubResource("AudioStreamGenerator_edqxi")
 clip_0/auto_advance = 0
 clip_1/name = &"Track 1"
 clip_1/stream = SubResource("AudioStreamPlaylist_kloir")

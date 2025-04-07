@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbhoxafd1hwba"]
+[gd_scene load_steps=3 format=3 uid="uid://bqfwkbanhrggb"]
 
 [ext_resource type="Script" uid="uid://o1tcygi8u40c" path="res://source/globals/audio_manager.gd" id="1_edqxi"]
-[ext_resource type="AudioStream" uid="uid://d0hmtvvluxylw" path="res://assets/audio/GameMusic.tres" id="2_va7d0"]
+[ext_resource type="AudioStream" uid="uid://bxbxfl3mpjf4m" path="res://assets/audio/GameMusic.tres" id="2_va7d0"]
 
 [node name="AudioManager" type="Node"]
 process_mode = 3
