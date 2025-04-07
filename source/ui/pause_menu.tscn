@@ -29,10 +29,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -35.0
-offset_top = -21.5
-offset_right = 35.0
-offset_bottom = 21.5
+offset_left = -162.0
+offset_top = -136.0
+offset_right = 162.0
+offset_bottom = 136.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -45,28 +45,51 @@ theme_override_constants/margin_bottom = 12
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 12
+theme_override_constants/separation = 10
 
 [node name="ResumeBttn" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_vertical = 3
 text = "Resume"
 
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+text = "Master Volume"
+vertical_alignment = 2
+
 [node name="MasterVolume" type="HSlider" parent="PanelContainer/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(200, 0)
+custom_minimum_size = Vector2(200, 20)
 layout_mode = 2
 script = ExtResource("2_5vpx4")
 metadata/_custom_type_script = "uid://cpmo3tlylmfs2"
 
+[node name="Label2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+text = "Music Volume"
+vertical_alignment = 2
+
 [node name="MusicVolume" type="HSlider" parent="PanelContainer/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(200, 0)
+custom_minimum_size = Vector2(200, 20)
 layout_mode = 2
 script = ExtResource("2_5vpx4")
 bus_name = &"Music"
 metadata/_custom_type_script = "uid://cpmo3tlylmfs2"
 
+[node name="Label3" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+text = "Sound Effect Volume"
+vertical_alignment = 2
+
 [node name="SFXVolume" type="HSlider" parent="PanelContainer/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(200, 0)
+custom_minimum_size = Vector2(200, 20)
 layout_mode = 2
 script = ExtResource("2_5vpx4")
 bus_name = &"Sound Effects"
