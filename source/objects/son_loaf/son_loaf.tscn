@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4voidglwkpsq"]
+
+[ext_resource type="Texture2D" uid="uid://d34ser833qnme" path="res://assets/textures/fat_mouse.png" id="1_op86i"]
+[ext_resource type="Script" uid="uid://celj8uqw1ituk" path="res://source/objects/son_loaf/son_loaf.gd" id="1_us76i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_us76i"]
+radius = 46.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_us76i"]
+radius = 66.0
+height = 214.0
+
+[node name="SonLoaf" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+script = ExtResource("1_us76i")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(12, 23)
+shape = SubResource("CircleShape2D_us76i")
+debug_color = Color(0.829709, 0.384751, 0.229098, 0.42)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(9, 41)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_us76i")
+debug_color = Color(1, 0.778, 0.298, 0.379)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+scale = Vector2(0.085, 0.085)
+texture = ExtResource("1_op86i")

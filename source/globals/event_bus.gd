@@ -12,3 +12,6 @@ signal level_load_started(level_path : String)
 signal level_load_completed
 signal level_transition_started
 signal level_transition_completed
+
+signal start_dialogue
+signal end_dialogue
