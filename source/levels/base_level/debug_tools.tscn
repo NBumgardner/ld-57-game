@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bv8c0oyd20fir"]
+[gd_scene format=3 uid="uid://bv8c0oyd20fir"]
 
 [ext_resource type="PackedScene" uid="uid://cbb4ib7lqcrfb" path="res://source/player/Player.tscn" id="1_d2tia"]
 
@@ -13,16 +13,16 @@ fill_to = Vector2(0, 0)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_utk7h"]
 
-[node name="DebugTools" type="Node2D"]
+[node name="DebugTools" type="Node2D" unique_id=1507534257]
 z_as_relative = false
 y_sort_enabled = true
 
-[node name="Node" type="Node" parent="."]
+[node name="Node" type="Node" parent="." unique_id=1364152613]
 
-[node name="Background" type="Node2D" parent="Node"]
+[node name="Background" type="Node2D" parent="Node" unique_id=761251199]
 metadata/_edit_lock_ = true
 
-[node name="WallMiddle" type="Polygon2D" parent="Node/Background"]
+[node name="WallMiddle" type="Polygon2D" parent="Node/Background" unique_id=437199964]
 z_index = -2000
 position = Vector2(-13.6205, -61.5004)
 scale = Vector2(1.35983, 0.873694)
@@ -31,7 +31,7 @@ polygon = PackedVector2Array(-154.71, 479.001, -593, -479, 613.033, -479, 175.47
 uv = PackedVector2Array(0, 64, 0, -1.19209e-07, 64, -4.76837e-07, 64, 64)
 metadata/_edit_lock_ = true
 
-[node name="WallRight" type="Polygon2D" parent="Node/Background/WallMiddle"]
+[node name="WallRight" type="Polygon2D" parent="Node/Background/WallMiddle" unique_id=526735093]
 position = Vector2(16.6348, 70.3912)
 scale = Vector2(0.735386, 1.14457)
 texture = SubResource("GradientTexture2D_tfjt1")
@@ -39,7 +39,7 @@ polygon = PackedVector2Array(160, 480, 599, -481, 945, 387, 160, 540)
 uv = PackedVector2Array(0, 64, 0, -1.19209e-07, 64, -4.76837e-07, 64, 64)
 metadata/_edit_lock_ = true
 
-[node name="WallLeft" type="Polygon2D" parent="Node/Background/WallMiddle"]
+[node name="WallLeft" type="Polygon2D" parent="Node/Background/WallMiddle" unique_id=1374401922]
 position = Vector2(3.39785, 70.3912)
 scale = Vector2(0.735386, 1.14457)
 texture = SubResource("GradientTexture2D_tfjt1")
@@ -47,36 +47,36 @@ polygon = PackedVector2Array(-160, 480, -599, -480, -945, 387, -160, 540)
 uv = PackedVector2Array(0, 64, 0, -1.19209e-07, 64, -4.76837e-07, 64, 64)
 metadata/_edit_lock_ = true
 
-[node name="Borders" type="StaticBody2D" parent="Node"]
+[node name="Borders" type="StaticBody2D" parent="Node" unique_id=830067435]
 visible = false
 metadata/_edit_lock_ = true
 
-[node name="Bottom" type="CollisionShape2D" parent="Node/Borders"]
+[node name="Bottom" type="CollisionShape2D" parent="Node/Borders" unique_id=1319409659]
 position = Vector2(0, 281)
 shape = SubResource("WorldBoundaryShape2D_utk7h")
 metadata/_edit_lock_ = true
 
-[node name="Top" type="CollisionShape2D" parent="Node/Borders"]
+[node name="Top" type="CollisionShape2D" parent="Node/Borders" unique_id=1206066344]
 position = Vector2(0, -191)
 rotation = 3.14159
 shape = SubResource("WorldBoundaryShape2D_utk7h")
 metadata/_edit_lock_ = true
 
-[node name="Left" type="CollisionShape2D" parent="Node/Borders"]
+[node name="Left" type="CollisionShape2D" parent="Node/Borders" unique_id=921906721]
 position = Vector2(-518, 0)
 rotation = 1.79209
 shape = SubResource("WorldBoundaryShape2D_utk7h")
 metadata/_edit_lock_ = true
 
-[node name="Left2" type="CollisionShape2D" parent="Node/Borders"]
+[node name="Left2" type="CollisionShape2D" parent="Node/Borders" unique_id=1162355335]
 position = Vector2(518, 0)
 rotation = -1.79245
 shape = SubResource("WorldBoundaryShape2D_utk7h")
 metadata/_edit_lock_ = true
 
-[node name="GameCamera" type="Camera2D" parent="Node"]
+[node name="GameCamera" type="Camera2D" parent="Node" unique_id=406757631]
 metadata/_edit_lock_ = true
 
-[node name="Player" parent="." instance=ExtResource("1_d2tia")]
+[node name="Player" parent="." unique_id=2140167230 instance=ExtResource("1_d2tia")]
 z_as_relative = false
 position = Vector2(-254, 51)

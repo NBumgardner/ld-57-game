@@ -1,4 +1,4 @@
 [gd_scene format=3 uid="uid://c6rlbj31qgrxy"]
 
-[node name="Dialogue" type="CanvasLayer"]
+[node name="Dialogue" type="CanvasLayer" unique_id=891237688]
 follow_viewport_enabled = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cbb4ib7lqcrfb"]
+[gd_scene format=3 uid="uid://cbb4ib7lqcrfb"]
 
 [ext_resource type="Script" uid="uid://dpe4mrdpy3rvy" path="res://source/player/player.gd" id="1_rbb8n"]
 [ext_resource type="Script" uid="uid://pnerh0kmcscw" path="res://source/player/health.gd" id="2_wydru"]
@@ -97,12 +97,12 @@ _data = {
 &"take_damage": SubResource("Animation_6gbyg")
 }
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" unique_id=2099598053]
 y_sort_enabled = true
 collision_layer = 2
 script = ExtResource("1_rbb8n")
 
-[node name="Health" type="Area2D" parent="."]
+[node name="Health" type="Area2D" parent="." unique_id=123101444]
 collision_layer = 2
 collision_mask = 0
 monitoring = false
@@ -110,12 +110,12 @@ script = ExtResource("2_wydru")
 max_health = 6.0
 metadata/_custom_type_script = "uid://pnerh0kmcscw"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Health"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Health" unique_id=2072529650]
 position = Vector2(-1, 4)
 shape = SubResource("CapsuleShape2D_6gbyg")
 debug_color = Color(0.8, 0.428267, 0.144, 0.223529)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1545531902]
 scale = Vector2(0.05, 0.05)
 sprite_frames = SubResource("SpriteFrames_rbb8n")
 animation = &"idle"
@@ -123,22 +123,20 @@ autoplay = "idle"
 frame_progress = 0.690306
 offset = Vector2(0, -62)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1112713856]
 z_index = 2
 position = Vector2(-1, 30)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_1jkmm")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_kqkdd")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=218984071]
+libraries/ = SubResource("AnimationLibrary_kqkdd")
 
-[node name="AudioListener2D" type="AudioListener2D" parent="."]
+[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=698372053]
 position = Vector2(0, -17)
 current = true
 
-[node name="Shadow" type="Sprite2D" parent="."]
+[node name="Shadow" type="Sprite2D" parent="." unique_id=1610149299]
 modulate = Color(0, 0, 0, 0.207843)
 z_index = -1
 position = Vector2(-2, 30)

@@ -1,13 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bqfwkbanhrggb"]
+[gd_scene format=3 uid="uid://bqfwkbanhrggb"]
 
 [ext_resource type="Script" uid="uid://o1tcygi8u40c" path="res://source/globals/audio_manager.gd" id="1_edqxi"]
 [ext_resource type="AudioStream" uid="uid://bxbxfl3mpjf4m" path="res://assets/audio/GameMusic.tres" id="2_va7d0"]
 
-[node name="AudioManager" type="Node"]
+[node name="AudioManager" type="Node" unique_id=1479683090]
 process_mode = 3
 script = ExtResource("1_edqxi")
 
-[node name="GameMusic" type="AudioStreamPlayer" parent="."]
+[node name="GameMusic" type="AudioStreamPlayer" parent="." unique_id=1706176496]
 stream = ExtResource("2_va7d0")
 volume_db = -3.0
 bus = &"Music"

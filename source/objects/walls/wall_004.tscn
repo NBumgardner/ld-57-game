@@ -1,13 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://d0r046pma1uph"]
+[gd_scene format=3 uid="uid://d0r046pma1uph"]
 
 [ext_resource type="Texture2D" uid="uid://dbift1wm4opn2" path="res://assets/placeholder/wall_c_2_plastic_rings.png" id="1_g24yx"]
 
-[node name="Wall004" type="StaticBody2D"]
+[node name="Wall004" type="StaticBody2D" unique_id=260000248]
 
-[node name="WallCRings" type="Sprite2D" parent="."]
+[node name="WallCRings" type="Sprite2D" parent="." unique_id=1708267223]
 texture = ExtResource("1_g24yx")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1511991216]
 position = Vector2(0, -4.52995e-06)
 scale = Vector2(1, 0.989305)
 polygon = PackedVector2Array(-75.5, -93.5, -75.5, 93.5, 75.5, 93.5, 75.5, -93.5)
