@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dx584vm0bf5h7"]
+[gd_scene format=3 uid="uid://dx584vm0bf5h7"]
 
 [ext_resource type="Texture2D" uid="uid://gr0d073jjhb" path="res://assets/textures/trap/Trap.png" id="1_dhjhq"]
 [ext_resource type="Script" uid="uid://cl5gvyxn3368b" path="res://source/objects/snap_trap/snap_trap.gd" id="1_osnl0"]
@@ -139,27 +139,25 @@ _data = {
 &"snap": SubResource("Animation_s6ef3")
 }
 
-[node name="SnapTrap" type="Area2D"]
+[node name="SnapTrap" type="Area2D" unique_id=1728102014]
 z_index = -1
 collision_layer = 4
 collision_mask = 2
 monitorable = false
 script = ExtResource("1_osnl0")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=4542]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_5n6jr")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1394913965]
 position = Vector2(-32.25, 17)
 shape = SubResource("RectangleShape2D_mwf4w")
 debug_color = Color(0.993, 0, 0.248, 0.196)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_ipokw")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1472175989]
+libraries/ = SubResource("AnimationLibrary_ipokw")
 
-[node name="SFX|Snap" type="AudioStreamPlayer2D" parent="."]
+[node name="SFX|Snap" type="AudioStreamPlayer2D" parent="." unique_id=1228995909]
 volume_db = 4.0
 bus = &"Sound Effects"

@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnej1lg77q1me"]
+[gd_scene format=3 uid="uid://dnej1lg77q1me"]
 
 [ext_resource type="Script" uid="uid://mykw187r5dmq" path="res://source/ui/title_screen.gd" id="1_17f1p"]
 [ext_resource type="Theme" uid="uid://cc6lnqbwuk0j3" path="res://assets/themes/font_title.tres" id="2_nwhvs"]
 [ext_resource type="Script" uid="uid://ddrvwo283bryh" path="res://source/ui/custom_elements/sonud_button.gd" id="3_t05mx"]
 
-[node name="TitleScreen" type="Control"]
+[node name="TitleScreen" type="Control" unique_id=253026829]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,7 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_17f1p")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1319372331]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,7 +22,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.15, 0.15, 0.15, 0.333333)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=888994998]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -36,40 +36,40 @@ offset_bottom = 73.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="VBoxContainer"]
+[node name="Title" type="Label" parent="VBoxContainer" unique_id=2038165120]
 layout_mode = 2
 theme = ExtResource("2_nwhvs")
 text = "Mousehold"
 horizontal_alignment = 1
 
-[node name="Subtitle" type="Label" parent="VBoxContainer"]
+[node name="Subtitle" type="Label" parent="VBoxContainer" unique_id=428001766]
 layout_mode = 2
 text = "Ludum Dare 57 Game Jam Entry"
 horizontal_alignment = 1
 
-[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer" unique_id=1152732862]
 layout_mode = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/CenterContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/CenterContainer" unique_id=1199208621]
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="VBoxContainer/CenterContainer/PanelContainer"]
+[node name="Panel" type="Panel" parent="VBoxContainer/CenterContainer/PanelContainer" unique_id=1923641745]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/CenterContainer/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/CenterContainer/PanelContainer" unique_id=205955876]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/CenterContainer/PanelContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/CenterContainer/PanelContainer/MarginContainer" unique_id=1427905733]
 layout_mode = 2
 
-[node name="StartButton" type="Button" parent="VBoxContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="StartButton" type="Button" parent="VBoxContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1561609169]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Start Game"
 script = ExtResource("3_t05mx")
 metadata/_custom_type_script = "uid://ddrvwo283bryh"
 
-[node name="QuitButton" type="Button" parent="VBoxContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="QuitButton" type="Button" parent="VBoxContainer/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=837371774]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Quit"

@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://b6n4i8bdfotkl"]
+[gd_scene format=3 uid="uid://b6n4i8bdfotkl"]
 
 [ext_resource type="Script" uid="uid://8b25hx3yxr8e" path="res://source/ui/game_over_screen.gd" id="1_kcqwk"]
 [ext_resource type="Texture2D" uid="uid://qe5phbmgdxt3" path="res://assets/placeholder/chef_cat.png" id="2_3rnon"]
 [ext_resource type="Script" uid="uid://ddrvwo283bryh" path="res://source/ui/custom_elements/sonud_button.gd" id="3_3oesf"]
 
-[node name="GameOverScreen" type="Control"]
+[node name="GameOverScreen" type="Control" unique_id=1570687220]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,7 +14,7 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_kcqwk")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1609529315]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,7 +23,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.223)
 
-[node name="ReferencePointCenter" type="Control" parent="."]
+[node name="ReferencePointCenter" type="Control" parent="." unique_id=302771910]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -37,10 +37,10 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="ReferencePointCenter"]
+[node name="Sprite2D" type="Sprite2D" parent="ReferencePointCenter" unique_id=1988997339]
 texture = ExtResource("2_3rnon")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1134086631]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -50,12 +50,12 @@ offset_right = 81.0
 offset_bottom = 54.0
 grow_horizontal = 2
 
-[node name="Label" type="Label" parent="MarginContainer"]
+[node name="Label" type="Label" parent="MarginContainer" unique_id=513806048]
 layout_mode = 2
 text = "Try Again?"
 horizontal_alignment = 1
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1438395857]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -69,13 +69,13 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="PanelContainer"]
+[node name="Panel" type="Panel" parent="PanelContainer" unique_id=830084445]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1077792214]
 layout_mode = 2
 
-[node name="RestartButton" type="Button" parent="PanelContainer/MarginContainer"]
+[node name="RestartButton" type="Button" parent="PanelContainer/MarginContainer" unique_id=1338887100]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Restart"

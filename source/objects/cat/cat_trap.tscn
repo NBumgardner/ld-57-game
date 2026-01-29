@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bi4xnp24pulp0"]
+[gd_scene format=3 uid="uid://bi4xnp24pulp0"]
 
 [ext_resource type="Texture2D" uid="uid://c58qfw0cqjm70" path="res://assets/textures/CircleGradient.png" id="1_a60ga"]
 [ext_resource type="Script" uid="uid://cf63tdqmkkf5h" path="res://source/objects/cat/cat_trap.gd" id="1_kpqax"]
@@ -191,30 +191,30 @@ _data = {
 &"retract_hand": SubResource("Animation_iou4k")
 }
 
-[node name="CatTrap" type="Area2D"]
+[node name="CatTrap" type="Area2D" unique_id=768141186]
 collision_layer = 4
 collision_mask = 2
 monitorable = false
 script = ExtResource("1_kpqax")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1889919868]
 rotation = 1.57079
 shape = SubResource("CapsuleShape2D_a60ga")
 debug_color = Color(0.7, 0.035, 0, 0)
 
-[node name="SpotLight" type="Sprite2D" parent="."]
+[node name="SpotLight" type="Sprite2D" parent="." unique_id=1546463657]
 modulate = Color(0.89, 0.8366, 0.7298, 0.207843)
 z_index = -1
 scale = Vector2(1.54688, 0.733826)
 texture = ExtResource("1_a60ga")
 
-[node name="CatHand" type="Sprite2D" parent="."]
+[node name="CatHand" type="Sprite2D" parent="." unique_id=1514445886]
 z_index = 4
 position = Vector2(0, -700)
 texture = ExtResource("3_jwpsy")
 offset = Vector2(0, -40)
 
-[node name="ColorRect" type="TextureRect" parent="CatHand"]
+[node name="ColorRect" type="TextureRect" parent="CatHand" unique_id=630669203]
 show_behind_parent = true
 offset_left = -56.0
 offset_top = -1743.0
@@ -223,11 +223,9 @@ offset_bottom = -103.0
 texture = ExtResource("4_iou4k")
 stretch_mode = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_iou4k")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1495874663]
+libraries/ = SubResource("AnimationLibrary_iou4k")
 
-[node name="SFX|Cat" type="AudioStreamPlayer2D" parent="."]
+[node name="SFX|Cat" type="AudioStreamPlayer2D" parent="." unique_id=1793518378]
 stream = ExtResource("5_iou4k")
 bus = &"Sound Effects"

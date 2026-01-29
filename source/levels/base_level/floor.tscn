@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c66qcxf03vsl3"]
+[gd_scene format=3 uid="uid://c66qcxf03vsl3"]
 
 [ext_resource type="Texture2D" uid="uid://des6iaxgnaohi" path="res://assets/textures/tiles/tilewood1.png" id="1_y80ay"]
 
@@ -9,14 +9,14 @@ gradient = SubResource("Gradient_pqajb")
 fill_from = Vector2(0, 1)
 fill_to = Vector2(0, 0)
 
-[node name="Floor" type="Polygon2D"]
+[node name="Floor" type="Polygon2D" unique_id=1131758346]
 z_index = -200
 texture = ExtResource("1_y80ay")
 polygon = PackedVector2Array(-475, -190, 475, -190, 580, 279, -580, 279)
 uv = PackedVector2Array(499.756, -0.244186, 500.244, 499.756, 0.244385, 500.244, -0.244186, 0.24437)
 metadata/_edit_lock_ = true
 
-[node name="FloorSide" type="Polygon2D" parent="."]
+[node name="FloorSide" type="Polygon2D" parent="." unique_id=1396932413]
 z_index = -50
 position = Vector2(0, 459)
 color = Color(0.2, 0.0862745, 0, 1)

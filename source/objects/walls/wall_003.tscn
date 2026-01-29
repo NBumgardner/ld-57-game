@@ -1,13 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://t841wjrlo7xk"]
+[gd_scene format=3 uid="uid://t841wjrlo7xk"]
 
 [ext_resource type="Texture2D" uid="uid://c1pm4t85t58c8" path="res://assets/textures/Wall B.png" id="1_106r7"]
 
-[node name="Wall003" type="StaticBody2D"]
+[node name="Wall003" type="StaticBody2D" unique_id=1288549749]
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="." unique_id=1739292307]
 scale = Vector2(0.5, 0.5)
 polygon = PackedVector2Array(-121.5, -185, -121.5, -183.5, -150.5, -122.7, -134.5, 175.1, -134.5, 185, 134.5, 185, 152, -120, 121.5, -184.5)
 
-[node name="WallBMatches" type="Sprite2D" parent="."]
+[node name="WallBMatches" type="Sprite2D" parent="." unique_id=1169083962]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_106r7")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dx3hj00udpdbk"]
+[gd_scene format=3 uid="uid://dx3hj00udpdbk"]
 
 [ext_resource type="Script" uid="uid://dywj2xf785k8c" path="res://source/objects/ladder/ladder.gd" id="1_le6h6"]
 [ext_resource type="Texture2D" uid="uid://cc05nougws1v" path="res://assets/textures/Justhole.png" id="2_2hbq0"]
@@ -8,23 +8,23 @@
 radius = 19.0
 height = 114.0
 
-[node name="Ladder" type="Area2D"]
+[node name="Ladder" type="Area2D" unique_id=1752621031]
 y_sort_enabled = true
 collision_mask = 2
 monitorable = false
 script = ExtResource("1_le6h6")
 
-[node name="Hole" type="Sprite2D" parent="."]
+[node name="Hole" type="Sprite2D" parent="." unique_id=396310891]
 z_index = -1
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_2hbq0")
 
-[node name="Ladder" type="Sprite2D" parent="."]
+[node name="Ladder" type="Sprite2D" parent="." unique_id=1205834613]
 z_index = -1
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("3_2hbq0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1074645901]
 visible = false
 position = Vector2(0, 22)
 rotation = 1.57079

@@ -8,12 +8,16 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="Mousehold"
 config/tags=PackedStringArray("ludum_dare")
 run/main_scene="uid://qrl3ks7c3cmx"
-config/features=PackedStringArray("4.5", "GL Compatibility")
+config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="uid://b8x7ax4g4x724"
 config/max_fps=0
 

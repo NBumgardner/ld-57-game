@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://qrl3ks7c3cmx"]
+[gd_scene format=3 uid="uid://qrl3ks7c3cmx"]
 
 [ext_resource type="Script" uid="uid://bf7wl22p8nx5d" path="res://source/main/main.gd" id="1_nevys"]
 [ext_resource type="PackedScene" uid="uid://cewy6y7gv5w8l" path="res://source/main/game_world.tscn" id="2_2a4ee"]
@@ -40,21 +40,21 @@ stream_0/volume = 0.0
 stream_1/stream = ExtResource("12_juaph")
 stream_1/volume = 0.0
 
-[node name="Main" type="Node"]
+[node name="Main" type="Node" unique_id=1590185913]
 process_mode = 3
 script = ExtResource("1_nevys")
 
-[node name="GameWorld" parent="." instance=ExtResource("2_2a4ee")]
+[node name="GameWorld" parent="." unique_id=1844933508 instance=ExtResource("2_2a4ee")]
 process_mode = 1
 metadata/_edit_lock_ = true
 
-[node name="UI" type="CanvasLayer" parent="."]
+[node name="UI" type="CanvasLayer" parent="." unique_id=1582137980]
 
-[node name="TitleScreen" parent="UI" instance=ExtResource("3_2a4ee")]
+[node name="TitleScreen" parent="UI" unique_id=1482136151 instance=ExtResource("3_2a4ee")]
 
-[node name="Hud" parent="UI" instance=ExtResource("5_2a4ee")]
+[node name="Hud" parent="UI" unique_id=476678309 instance=ExtResource("5_2a4ee")]
 
-[node name="Dialogue" type="Control" parent="UI"]
+[node name="Dialogue" type="Control" parent="UI" unique_id=213535434]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -64,7 +64,7 @@ grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("7_su7r8")
 
-[node name="Options" type="HBoxContainer" parent="UI/Dialogue"]
+[node name="Options" type="HBoxContainer" parent="UI/Dialogue" unique_id=1484309298]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -79,11 +79,11 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 60
 
-[node name="PanelContainer2" type="PanelContainer" parent="UI/Dialogue/Options"]
+[node name="PanelContainer2" type="PanelContainer" parent="UI/Dialogue/Options" unique_id=1894551329]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_n1u7n")
 
-[node name="YesButton" type="Button" parent="UI/Dialogue/Options/PanelContainer2"]
+[node name="YesButton" type="Button" parent="UI/Dialogue/Options/PanelContainer2" unique_id=1026611339]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(160, 80)
 layout_mode = 2
@@ -92,11 +92,11 @@ text = "Yes"
 script = ExtResource("8_h4euj")
 metadata/_custom_type_script = "uid://ddrvwo283bryh"
 
-[node name="PanelContainer3" type="PanelContainer" parent="UI/Dialogue/Options"]
+[node name="PanelContainer3" type="PanelContainer" parent="UI/Dialogue/Options" unique_id=525600628]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_n1u7n")
 
-[node name="NoButton" type="Button" parent="UI/Dialogue/Options/PanelContainer3"]
+[node name="NoButton" type="Button" parent="UI/Dialogue/Options/PanelContainer3" unique_id=604091536]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(160, 80)
 layout_mode = 2
@@ -105,7 +105,7 @@ text = "No
 script = ExtResource("8_h4euj")
 metadata/_custom_type_script = "uid://ddrvwo283bryh"
 
-[node name="PanelContainer" type="PanelContainer" parent="UI/Dialogue"]
+[node name="PanelContainer" type="PanelContainer" parent="UI/Dialogue" unique_id=2021244537]
 custom_minimum_size = Vector2(100, 160)
 layout_mode = 1
 anchors_preset = 12
@@ -117,24 +117,24 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_n1u7n")
 
-[node name="MarginContainer" type="MarginContainer" parent="UI/Dialogue/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="UI/Dialogue/PanelContainer" unique_id=203547493]
 layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="DialougeLabel" type="Label" parent="UI/Dialogue/PanelContainer/MarginContainer"]
+[node name="DialougeLabel" type="Label" parent="UI/Dialogue/PanelContainer/MarginContainer" unique_id=998899604]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 1
 text = "Father... Have you come to feed me?"
 vertical_alignment = 1
 
-[node name="SFX|Consume" type="AudioStreamPlayer" parent="UI/Dialogue"]
+[node name="SFX|Consume" type="AudioStreamPlayer" parent="UI/Dialogue" unique_id=1725802882]
 stream = SubResource("AudioStreamSynchronized_87t75")
 pitch_scale = 0.6
 
-[node name="PauseMenu" parent="UI" instance=ExtResource("6_420hx")]
+[node name="PauseMenu" parent="UI" unique_id=523142239 instance=ExtResource("6_420hx")]
 
-[node name="GameOverScreen" parent="UI" instance=ExtResource("6_qkuhj")]
+[node name="GameOverScreen" parent="UI" unique_id=1095647307 instance=ExtResource("6_qkuhj")]

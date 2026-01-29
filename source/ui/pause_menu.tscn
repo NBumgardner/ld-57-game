@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://fu2qbtcnrita"]
+[gd_scene format=3 uid="uid://fu2qbtcnrita"]
 
 [ext_resource type="Script" uid="uid://mgnjsof4t4wi" path="res://source/ui/pause_menu.gd" id="1_pseub"]
 [ext_resource type="Script" uid="uid://cpmo3tlylmfs2" path="res://source/ui/custom_elements/audio_h_slider.gd" id="2_5vpx4"]
 [ext_resource type="Script" uid="uid://ddrvwo283bryh" path="res://source/ui/custom_elements/sonud_button.gd" id="2_tvwiv"]
 
-[node name="PauseMenu" type="Control"]
+[node name="PauseMenu" type="Control" unique_id=850765622]
 process_mode = 2
 layout_mode = 3
 anchors_preset = 15
@@ -14,7 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_pseub")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2051245675]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,7 +23,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.262745)
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=994703620]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -37,18 +37,18 @@ offset_bottom = 136.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1174151089]
 layout_mode = 2
 theme_override_constants/margin_left = 12
 theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
 theme_override_constants/margin_bottom = 12
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=191450630]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="ResumeBttn" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="ResumeBttn" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=858455376]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
@@ -56,42 +56,42 @@ text = "Resume"
 script = ExtResource("2_tvwiv")
 metadata/_custom_type_script = "uid://ddrvwo283bryh"
 
-[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1943673466]
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=2046407285]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 text = "Master Volume"
 vertical_alignment = 2
 
-[node name="MasterVolume" type="HSlider" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="MasterVolume" type="HSlider" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1069067145]
 custom_minimum_size = Vector2(200, 20)
 layout_mode = 2
 script = ExtResource("2_5vpx4")
 metadata/_custom_type_script = "uid://cpmo3tlylmfs2"
 
-[node name="Label2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=691630436]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 text = "Music Volume"
 vertical_alignment = 2
 
-[node name="MusicVolume" type="HSlider" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="MusicVolume" type="HSlider" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=390186023]
 custom_minimum_size = Vector2(200, 20)
 layout_mode = 2
 script = ExtResource("2_5vpx4")
 bus_name = &"Music"
 metadata/_custom_type_script = "uid://cpmo3tlylmfs2"
 
-[node name="Label3" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="Label3" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1583588819]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 text = "Sound Effect Volume"
 vertical_alignment = 2
 
-[node name="SFXVolume" type="HSlider" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="SFXVolume" type="HSlider" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1211314469]
 custom_minimum_size = Vector2(200, 20)
 layout_mode = 2
 script = ExtResource("2_5vpx4")
