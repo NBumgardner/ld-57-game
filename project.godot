@@ -29,7 +29,7 @@ buses/default_bus_layout="uid://cf1kouuuqdfjn"
 
 Database="*res://source/globals/data/database.gd"
 Events="*res://source/globals/event_bus.gd"
-AudioManager="*res://assets/AudioManager.tscn"
+AudioManager="*res://source/globals/AudioManager.tscn"
 
 [debug]
 

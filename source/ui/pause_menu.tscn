@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://mgnjsof4t4wi" path="res://source/ui/pause_menu.gd" id="1_pseub"]
 [ext_resource type="Script" uid="uid://cpmo3tlylmfs2" path="res://source/ui/custom_elements/audio_h_slider.gd" id="2_5vpx4"]
-[ext_resource type="Script" uid="uid://ddrvwo283bryh" path="res://source/ui/custom_elements/sonud_button.gd" id="2_tvwiv"]
+[ext_resource type="Script" uid="uid://ddrvwo283bryh" path="res://source/ui/custom_elements/sound_button.gd" id="2_tvwiv"]
 
 [node name="PauseMenu" type="Control" unique_id=850765622]
 process_mode = 2
