@@ -1,4 +1,4 @@
-[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://cf1kouuuqdfjn"]
+[gd_resource type="AudioBusLayout" format=3 uid="uid://cf1kouuuqdfjn"]
 
 [sub_resource type="AudioEffectChorus" id="AudioEffectChorus_afxfe"]
 resource_name = "Chorus"

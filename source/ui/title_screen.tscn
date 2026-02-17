@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://mykw187r5dmq" path="res://source/ui/title_screen.gd" id="1_17f1p"]
 [ext_resource type="Theme" uid="uid://cc6lnqbwuk0j3" path="res://assets/themes/font_title.tres" id="2_nwhvs"]
-[ext_resource type="Script" uid="uid://ddrvwo283bryh" path="res://source/ui/custom_elements/sonud_button.gd" id="3_t05mx"]
+[ext_resource type="Script" uid="uid://ddrvwo283bryh" path="res://source/ui/custom_elements/sound_button.gd" id="3_t05mx"]
 
 [node name="TitleScreen" type="Control" unique_id=253026829]
 layout_mode = 3
